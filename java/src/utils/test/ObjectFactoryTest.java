@@ -18,5 +18,8 @@ public class ObjectFactoryTest {
         HashMap map = ObjectFactory.getcolValueMap(o);
         Set keySet = map.keySet();
         keySet.forEach(key -> System.out.println(key + " ： "+ map.get(key)));
+        System.out.println("-------------------------------");
+        Object name = ObjectFactory.execMethod(o, "getName");
+        System.out.println("exec result : "+name);
     }
 }
