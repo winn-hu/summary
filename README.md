@@ -1,5 +1,7 @@
 # summary
 add my practical code
 including:
--- java
-  --- utils : ObjectFactory
+-- comm
+  --- utils : ObjectFactory、Properties
+  --- jdk
+  --- concurrency : SyncDefect
