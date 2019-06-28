@@ -1,4 +1,4 @@
-package utils.test;
+package utils;
 
 public class Person {
     private String name;
