@@ -1,5 +1,6 @@
 package utils;
 
+import org.junit.Assert;
 import org.junit.Test;
 
 import java.time.LocalDateTime;
@@ -61,6 +62,12 @@ public class JsonUtilTest {
             Map map = (Map) object;
             map.keySet().forEach(key -> System.out.println(key+":"+map.get(key)));
         });
+    }
+
+    @Test
+    public void getValueTest(){
+        String json = "{\"START_TIME\":\"2019-07-01 16:02:36\",\"END_TIME\":\"2019-11-01 23:59:59\",\"INTEGER\":\"1\"}";
+        Assert.assertEquals(JsonUtil.getValue(json,"END_TIME",String.class),"2019-11-01 23:59:59");
     }
 
 }
