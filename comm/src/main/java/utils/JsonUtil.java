@@ -28,6 +28,10 @@ public class JsonUtil {
         return getGson().toJson(list);
     }
 
+    public static <T> T getValue(String jsonSrc, String key, Class<T> type){
+        return (T)json2map(jsonSrc).get(key);
+    }
+
     private static Gson getGson(){
         if(gson == null){
             gson = new GsonBuilder()
