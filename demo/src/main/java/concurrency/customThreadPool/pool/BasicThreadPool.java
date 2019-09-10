@@ -1,10 +1,10 @@
-package concurrency.threadPool.pool;
+package concurrency.customThreadPool.pool;
 
-import concurrency.threadPool.InternalTask;
-import concurrency.threadPool.factory.ThreadFacotry;
-import concurrency.threadPool.policy.DenyPolicy;
-import concurrency.threadPool.queue.LinkedRunnableQueue;
-import concurrency.threadPool.queue.RunnableQueue;
+import concurrency.customThreadPool.InternalTask;
+import concurrency.customThreadPool.factory.ThreadFacotry;
+import concurrency.customThreadPool.policy.DenyPolicy;
+import concurrency.customThreadPool.queue.LinkedRunnableQueue;
+import concurrency.customThreadPool.queue.RunnableQueue;
 
 import java.util.ArrayDeque;
 import java.util.Queue;
@@ -188,7 +188,7 @@ public class BasicThreadPool extends Thread implements ThreadPool {
             }
             synchronized (this) {
                 if (isShutdown) break;
-                if(taskQueue.size() > 0){//some tasks still aren't executed, to resize threadPool
+                if(taskQueue.size() > 0){//some tasks still aren't executed, to resize customThreadPool
                     if(activeCount < coreSize) {
                         for (int i = initSize; i < coreSize; i++) {
                             newThread();

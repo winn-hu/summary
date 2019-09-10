@@ -1,6 +1,6 @@
-package concurrency.threadPool;
+package concurrency.customThreadPool;
 
-import concurrency.threadPool.queue.RunnableQueue;
+import concurrency.customThreadPool.queue.RunnableQueue;
 /**
  * get task from RunnableQueue, and execute task.
  */
@@ -15,7 +15,7 @@ public class InternalTask implements Runnable {
 
     /**
      * Stop current thread.
-     * it will be invoked by concurrency.threadPool.pool.ThreadPool#shutdown()
+     * it will be invoked by concurrency.customThreadPool.pool.ThreadPool#shutdown()
      */
     public  void stop(){
         running = false;

@@ -1,4 +1,4 @@
-package concurrency.threadPool.exception;
+package concurrency.customThreadPool.exception;
 
 public class RunnaleDenyExceeption extends RuntimeException {
 

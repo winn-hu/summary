@@ -1,4 +1,4 @@
-package concurrency.threadPool.factory;
+package concurrency.customThreadPool.factory;
 
 @FunctionalInterface
 public interface ThreadFacotry {

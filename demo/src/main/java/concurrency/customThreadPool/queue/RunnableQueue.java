@@ -1,4 +1,4 @@
-package concurrency.threadPool.queue;
+package concurrency.customThreadPool.queue;
 
 /**
  * Task Queue

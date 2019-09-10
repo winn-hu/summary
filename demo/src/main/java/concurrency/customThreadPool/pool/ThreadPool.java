@@ -1,4 +1,4 @@
-package concurrency.threadPool.pool;
+package concurrency.customThreadPool.pool;
 
 public interface ThreadPool {
 

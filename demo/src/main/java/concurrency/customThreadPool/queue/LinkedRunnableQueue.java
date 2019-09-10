@@ -1,7 +1,7 @@
-package concurrency.threadPool.queue;
+package concurrency.customThreadPool.queue;
 
-import concurrency.threadPool.policy.DenyPolicy;
-import concurrency.threadPool.pool.ThreadPool;
+import concurrency.customThreadPool.policy.DenyPolicy;
+import concurrency.customThreadPool.pool.ThreadPool;
 
 import java.util.LinkedList;
 

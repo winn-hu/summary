@@ -1,7 +1,7 @@
-package concurrency.threadPool.policy;
+package concurrency.customThreadPool.policy;
 
-import concurrency.threadPool.exception.RunnaleDenyExceeption;
-import concurrency.threadPool.pool.ThreadPool;
+import concurrency.customThreadPool.exception.RunnaleDenyExceeption;
+import concurrency.customThreadPool.pool.ThreadPool;
 
 /**
  * The DenyPolicy will be invoked if RunnableQueue is full when Runnable needs to be added to RunnableQueue.

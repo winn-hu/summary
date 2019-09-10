@@ -1,6 +1,6 @@
-package concurrency.threadPool.test;
+package concurrency.customThreadPool.test;
 
-import concurrency.threadPool.pool.BasicThreadPool;
+import concurrency.customThreadPool.pool.BasicThreadPool;
 
 import java.util.concurrent.TimeUnit;
 
