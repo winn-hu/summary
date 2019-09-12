@@ -5,7 +5,6 @@ import java.sql.Timestamp;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.HashMap;
-import java.util.Set;
 
 public class ObjectFactory {
     private static SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
@@ -75,9 +74,9 @@ public class ObjectFactory {
 
     /**
      * 获取getter返回值（无参）
-     * @param object
-     * @param colName
-     * @return
+     * @param object 实例对象
+     * @param colName 属性名
+     * @return 目标值
      */
     public static Object getValue(Object object, String colName) {
         Object o = null;
@@ -116,7 +115,7 @@ public class ObjectFactory {
      * @param object 实例对象
      * @param colName 属性名
      * @param parameterValues 参数
-     * @return
+     * @return 目标值
      */
     public static Object getValue(Object object, String colName,Object[] parameterValues) {
         Object o = null;
@@ -220,23 +219,20 @@ public class ObjectFactory {
         }
     }
 
-    public static String formatDate(Object in) {
+    private static String formatDate(Object in) {
         return sdf.format(in);
     }
 
-    public static String formatTimeStamp(Object in) {
+    private static String formatTimeStamp(Object in) {
         return sdfLong.format(in);
     }
 
     /**
-     * @jira: HRPCOMMDEVJAVA-2198
-     * @Title: execMethod
-     * @Description: 执行无参方法
-     * @author: sjl
-     * @date 2018年3月16日 下午3:24:16
-     * @param object
-     * @param methodName
-     * @return
+     *
+     * 执行无参方法
+     * @param object 实例对象
+     * @param methodName 方法名
+     * @return 返回结果
      */
     @SuppressWarnings({ "rawtypes", "unchecked" })
     public static Object execMethod(Object object, String methodName) {
