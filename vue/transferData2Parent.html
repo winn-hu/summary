@@ -1,0 +1,32 @@
+<div id="app"></div>
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script type="text/javascript">
+   var childComponent = {
+   		data(){
+            return {
+               msg: "Hi Parent..."
+            }
+         },
+         /*3. 添加事件doclick触发父组件中的事件childHandler*/
+   		template:"<div v-on:click='doclick(msg)'>child</div>",
+         methods:{
+            doclick(val){
+               /*4. 使用$emit(触发的事件名,传递的值)触发父组件中的事件childHandler*/
+               this.$emit('childHandler',val);
+            }
+         }
+   };
+   
+   var vue = new Vue({
+   	el: "#app",
+   	components:{childComponent},
+   	/*1. 给子组件创建自定义事件childHandler*/
+   	template: "<div><childComponent v-on:childHandler='handler' /></div>",
+      methods:{
+         /*2. 实现handler方法*/
+         handler(val){
+            console.log("Data from child : "+val);
+         }
+      }
+   });
+</script>

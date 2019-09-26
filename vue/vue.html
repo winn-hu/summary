@@ -1,0 +1,28 @@
+<div id = "app" class="box" :class='{active:false}'>
+	<div :a='msg'>a</div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script type="text/javascript">
+	Vue.component('article-item',{
+		props : ['article'],
+		template : '<div><h1>{{article.title}}</h1><h3>&nbsp;&nbsp;{{article.content}}</h3></div>'
+	});
+
+	new Vue({
+		el : '#app',
+		data : {
+			msg : 'hahah2a'
+		}
+	})
+</script>
+<style type="text/css">
+	.box {
+		width: 300px;
+		height: 300px;
+		background: red;
+	}
+	.active {
+		background: gray;
+	}
+</style>

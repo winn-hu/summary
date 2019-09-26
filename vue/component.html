@@ -1,0 +1,39 @@
+<div id="app"></div>
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script type="text/javascript">
+	var titleComponent = {
+		template:'<h1 v-on:click="fn">Component Demo</h1>',
+		methods:{
+			fn(){
+				console.log('this : ');
+				console.log(this);
+				console.log('parent : ');
+				console.log(this.$parent);
+				console.log('root : ');
+				console.log(this.$root);
+			}
+		}
+	}
+	var headerComponent = {
+		components:{titleComponent},
+		template:
+			'<div>                                '+
+			'  <titleComponent />                 '+
+			'  <h2>This is Header.</h2>           '+
+			 /*1. 使用<slot>默认值</slot>插槽，后期传入文本*/
+			'  <button><slot>Button</slot></button> '+
+			'</div>                               '
+		
+	}
+	var vm = new Vue({
+		el : '#app',
+		components:{headerComponent},
+		template: 
+			'<div>                                                 '+
+			/*2. 将<slot>默认值</slot>中的默认值设为Show*/                                                 
+			'	<headerComponent>Show</headerComponent>            '+
+			'	<p>This is APP template.</p>                       '+
+		    '</div>                                                '
+
+	})
+</script>

@@ -1,0 +1,20 @@
+<div id="app">
+      <input type='text' v-model='msg'>
+      <p>Original message : {{msg}}</p>
+      <p>Computed Reverse message : {{reverse}}</p>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script type="text/javascript">
+      new Vue({
+            el: '#app',
+            data: {
+                  msg: 'Hello'
+            },
+            /*监听msg值的变化【computed可以在一个函数中监听多个属性】*/
+            computed:{
+                  reverse : function(){
+                        return this.msg.split('').reverse().join('');
+                  }
+            }
+      })
+</script>
