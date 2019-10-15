@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <div id='app'>
 	<input type='number' v-model='price' />
 	<br />
@@ -22,4 +23,30 @@
 			}
 		}
 	});
+=======
+<div id='app'>
+	<input type='number' v-model='price' />
+	<br />
+	<label>{{price | toDollor}}</label>
+	<p>{{price | addOne(msg)}}</p>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script type="text/javascript">
+	Vue.filter('addOne',function(val,arg){
+		return arg + ' ' +val + 1;
+	});
+	var app = new Vue({
+		el: "#app",
+		data: {
+		    price: 0,
+		    msg:"string append"
+		},
+		filters: {
+			toDollor(val) {
+				return '$'+val;
+			}
+		}
+	});
+>>>>>>> origin/master
 </script>
