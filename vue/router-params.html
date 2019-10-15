@@ -1,0 +1,47 @@
+<html>
+<head>
+	<title>Vue Router</title>
+	<!-- 1.导包 -->
+	<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+	<script src="vue-router.js"></script>
+</head>
+<body>
+	<div id='app'></div>
+	<script type="text/javascript">
+		/*2. 创建组件*/
+		var User = {
+			data() {
+				return {
+					uname: ''
+				}
+			},
+			mounted() {
+				/*5. 获取url中的参数*/
+				this.uname = this.$route.params.uname;
+			},
+			template: '<div>'+
+					  'My name is {{uname}}'+
+					  '</div>'
+		};
+		/*3. 创建router对象*/
+		var router = new VueRouter({
+			routes:[
+				{
+					path:'/user/:uname',
+					component: User,
+				}
+			]
+		});
+		/*4.挂载router，使用router-link和router-view绘制页面*/
+		new Vue({
+			el:'#app',
+			router,
+			template: '<div>'+
+					  '<router-link to="/user/winn">User Info</router-link>'+
+					  '<router-view></router-view>'+
+					  "</div>"
+
+		});
+	</script>
+</body>
+</html>

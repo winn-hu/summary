@@ -1,0 +1,33 @@
+<div id='app'>
+	<input type='text' v-model='msg' />
+	<input type='Button' @click="student[0].name = 'Jone'" value='Change'/>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script type="text/javascript">
+	var app = new Vue({
+		el: "#app",
+		data: {
+		    msg:"string append",
+		    student:[{name:'Jack'},{name:'Tom'}]
+		},
+		watch: {
+			/*key : value
+				key为需要监听的值,
+				value为函数，当值改变时触发函数
+			*/
+			msg:function(newVal,oldVal){
+					console.log("'"+oldVal + " 'changes to '" + newVal + "'");
+			},
+			//对象需要深度监听
+			student:{
+				deep:true,
+				handler:function(newVal,oldVal){
+					/*此处有一个问题，newVal和oldVal值一样*/
+					console.log(oldVal);
+					console.log(newVal);
+				} 
+			}
+		}
+	});
+</script>

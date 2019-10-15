@@ -1,0 +1,29 @@
+<!-- $nextTick是在DOM更新结束之后执行的回调函数，
+	在数据修改之后使用此方法获取修改后的DOM-->
+<div id='app'>
+	<!-- 1. 关联属性 ref='xxx'-->
+	<input type='text' ref='input' v-show='isShow' />
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script type="text/javascript">
+	new Vue({
+		el: '#app',
+		data() {
+			return {
+				isShow: false
+			}
+		},
+		mounted() {
+			this.isShow = true;
+
+			//直接使用，无法获取焦点
+			//this.$refs.input.focus();
+			
+			this.$nextTick(function(){
+				/*可以获取焦点*/
+				this.$refs.input.focus();
+			});
+		}
+	});
+</script>

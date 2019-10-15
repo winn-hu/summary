@@ -1,0 +1,90 @@
+<html>
+<head>
+	<title>Vue Router</title>
+	<!-- 1.导包 -->
+	<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+	<script src="vue-router.js"></script>
+</head>
+<body>
+	<div id='app'>
+		<router-link to='/home'>Home</router-link>
+		<router-link to='/blog'>Blog</router-link>
+		<a href='javascript:void(0)'>Exit</a>
+		<router-view></router-view>
+	</div>
+</body>
+<script type="text/javascript">
+	Vue.use(VueRouter);
+	var Home={
+		template: "<div>"+
+				  "This is Home Page."+
+				  "</div>"
+	};
+	var Blog={
+		template: "<div>"+
+				  "This is Blog Page."+
+				  "</div>"
+	};
+	var Login={
+		data(){
+			return {
+				uname:'',
+				pwd:''
+			}
+		},
+		template: "<div>"+
+				  "username : <input v-model='uname' type='text' /><br />"+
+				  "password : <input v-model='pwd' type='password' /><br />"+
+				  "<input type='button'  @click='loginHandler' value='Submit' />"+
+				  "</div>",
+		methods:{
+			loginHandler(){
+				/*缓存数据*/
+				localStorage.setItem('user',{uname:this.uname,pwd:this.pwd});
+				/*页面跳转*/
+				this.$router.push({name:'blog'});
+			}
+		}
+	};
+	var router = new VueRouter({
+		routes:[
+			{
+				path:'/',
+				redirect:'/home',
+			},
+			{
+				path:'/home',
+				component: Home
+			},
+			{
+				name:'blog',
+				path:'/blog',
+				component: Blog,
+				/*1. 添加元数据auth（自定义键值对）用于权限控制*/
+				meta:{
+					auth: true
+				}
+			},
+			{
+				path:'/login',
+				component: Login
+			},
+		]
+	});
+	/*路由切换时触发*/
+	router.beforeEach((to,from,next) => {
+		console.log(to);
+		/*进行路由跳转*/
+		if(to.meta.auth && !localStorage.getItem('user')){
+			next({path:'/login'});
+		}else{
+			next();
+		}
+	});
+	new Vue({
+		el:'#app',
+		router
+	});
+</script>
+
+</html>

@@ -1,0 +1,49 @@
+<div id='app'>
+	Root Message : {{vMsg}}
+	<Parent />
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script type="text/javascript">
+	Vue.component('Child',{
+		data(){
+			return {
+				cMsg: ''
+			}
+		},
+		template: "<div>"+
+				  "  <input type='text' v-model='cMsg' @input='changeVal()'  />"+
+				  "</div>",
+		methods: {
+			changeVal() {
+				this.$parent.pMsg = this.cMsg;
+				this.$root.vMsg = 'To Root : '+this.cMsg;
+			}
+		}
+	});
+	Vue.component('Parent',{
+		data(){
+			return {
+				pMsg: 'Hello winn'
+			}
+		},
+		template: "<div>"+
+				  "  <input type='button' @click='doClick()' value='To Child'/>"+
+				  "  Parent Message : {{pMsg}}"+
+				  "  <Child />"+
+				  "</div>",
+		methods: {
+			doClick() {
+				this.$children[0].cMsg = this.pMsg;
+			}
+		}
+	});
+	new Vue({
+		el: "#app",
+		data(){
+			return {
+				vMsg : "hello winn"
+			}
+		},
+	});
+</script>

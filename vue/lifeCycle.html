@@ -1,0 +1,89 @@
+<div id='app'></div>
+
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script type="text/javascript">
+	Vue.component('MyCmpnt',{
+		data(){
+			return {
+				date: '2019-09-25'
+			}
+		},
+		template: '<div>I am a new component.</div>',
+		/*未使用keep-alive*/
+		beforeDestroy(){
+			console.log("=> beforeDestroy");
+		},
+		destroyed(){
+			console.log("=> destroy");
+		},
+		/*使用keep-alive*/
+		activated(){
+			console.log("=> activated");
+		},
+		deactivated(){
+			console.log("=> deactivated");
+		}
+
+	});
+	new Vue({
+		el: "#app",
+		data(){
+			return {
+				msg : "hello",
+				isShow : true
+			}
+		},
+		/*keep-alive能使组件在切换过程中将组件状态保存在内存中
+			对应的声明周期从destroy变为deactivated*/
+		template:
+			"<div id='template'>"+
+			"    <p>{{msg}}</p>"+
+			"    <keep-alive>"+
+			"        <MyCmpnt v-if='isShow'/>"+
+			"    </keep-alive>"+
+			"    <button @click='doChange()'>Change</button>"+
+			"    <button @click='changeState()'>State</button>"+
+			"</div>",
+		methods:{
+			doChange(){
+				this.msg = 'winn';
+			},
+			changeState(){
+				this.isShow = !this.isShow;
+			}
+		},
+		/*数据注入组件之前*/
+		beforeCreate(){
+			console.log("beforeCreate =>");
+			console.log(this.msg);
+		},
+		/*组件已经完全加载*/
+		created(){
+			console.log("created =>");
+			console.log(this.msg);
+		},
+		/*数据加载（挂载）到DOM之前*/
+		beforeMount(){
+			console.log("beforeMount =>");
+			console.log(document.getElementById("app"));
+			console.log(document.getElementById("template"));
+		},
+		/*数据加载（挂载）到DOM之后
+		  页面加载完成*/
+		mounted(){
+			console.log("mounted =>");
+			console.log(document.getElementById("app"));
+			console.log(document.getElementById("template"));
+		},
+		/*页面更新之前，可以获取到原始的DOM*/
+		beforeUpdate(){
+			console.log("beforeUpdate =>");
+			console.log(document.getElementById("template").innerHTML);
+		},
+		/*页面更新之后，可以获取到最新的DOM*/
+		updated(){
+			console.log("updated =>");
+			console.log(document.getElementById("template").innerHTML);
+		}
+	})
+</script>
