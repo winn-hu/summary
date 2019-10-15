@@ -1,0 +1,44 @@
+<!-- 任意组件之间通信 -->
+<div id='app' >
+	<p>This is top component.</p>
+	<Parent />
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script type="text/javascript">
+
+	Vue.component('Brother2',{
+		data(){
+			return {
+				msg: ''
+			}
+		},
+		template: "<div id='brother2'>"+
+				  "	  <p>This is brother2 component.</p>"+
+				  "   <p>get message : {{msg}}</p>"+
+				  "</div>",
+		//2. 接受消息： 在需要接收消息的组件中添加inject
+		inject: ['hello'],
+		created(){
+			this.msg = this.hello;
+		}
+	});
+	Vue.component('Brother1',{
+		template: "<div id='brother1'>"+
+				  "  <p>This is brother1 component.</p>"+
+				  "</div>",
+	});
+	Vue.component('Parent',{
+		template: "<div id='one'>"+
+				  "  <Brother1 style='background-color:gray;'/>"+
+				  "  <Brother2 style='background-color:blue;'/>"+
+				  "</div>"
+	});
+	new Vue({
+		el: '#app',
+		//1. 传递消息 ： 在需要传递消息的组件中添加provide
+		provide: {
+			hello: 'Hello Winn'
+		}
+	});
+</script>

@@ -1,0 +1,56 @@
+<!-- 任意组件之间通信 -->
+<div id='app' >
+	<p>This is top component.</p>
+	<Parent />
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script type="text/javascript">
+
+	//1. 定义中间组件，用来传递消息
+	var bus = new Vue();
+
+	Vue.component('Brother2',{
+		data(){
+			return {
+				msg: 'Hello Brother1'
+			}
+		},
+		template: "<div id='brother2'>"+
+				  "	  <p>This is brother2 component.</p>"+
+				  "   <input type='button' @click='passData(msg)' value='Say Hello' />"+
+				  "</div>",
+		methods: {
+			passData(val){
+				//3. 在发送数据的组件中，触发bus的globalEvent事件
+				bus.$emit('globalEvent',val);
+			}
+		}
+	});
+	Vue.component('Brother1',{
+		data(){
+			return {
+				brother2Msg: ''
+			}
+		},
+		template: "<div id='brother1'>"+
+				  "  <p>This is brother1 component.</p>"+
+				  "   The data from Brother2 is : {{brother2Msg}}"+
+				  "</div>",
+	    //2. 在接收数据的组件中给BUS中间件添加globalEvent事件【页面加载完成后】
+		mounted() {
+			bus.$on('globalEvent',(val) => {
+				this.brother2Msg = val;
+			})
+		}
+	});
+	Vue.component('Parent',{
+		template: "<div id='one'>"+
+				  "  <Brother1 style='background-color:gray;'/>"+
+				  "  <Brother2 style='background-color:blue;'/>"+
+				  "</div>"
+	});
+	new Vue({
+		el: '#app'
+	});
+</script>

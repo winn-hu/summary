@@ -1,0 +1,16 @@
+<a href="#/login">Login</a>
+<a href="#/register">Register</a>
+<div id='app'></div>
+<script type="text/javascript">
+	window.onhashchange = function(){
+		var app = document.getElementById("app");
+		switch(location.hash) {
+			case '#/login' :
+				app.innerHTML = '<h1>This is Login Page.</h1>';
+				break;
+			case '#/register' :
+				app.innerHTML = '<h1>This is Register Page.</h1>';
+				break;
+		}
+	}
+</script>

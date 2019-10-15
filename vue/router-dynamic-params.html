@@ -1,0 +1,86 @@
+<html>
+<head>
+	<title>Vue Router</title>
+	<!-- 1.导包 -->
+	<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+	<script src="vue-router.js"></script>
+</head>
+<body>
+	<div id='app'></div>
+	<script type="text/javascript">
+		/*2. 创建组件*/
+		var Desc = {
+			data() {
+				return {
+					page: 'Front',
+					prePage:'null'
+				}
+			},
+			mounted() {
+				/*使用this.$route获取参数*/
+				console.log("params : "+this.$route.params.id);
+			},
+			watch: {
+				/*5. 使用$route(to,from)获取参数*/
+				$route(to,from){
+					this.prePage = from.params.id;
+					this.page = to.params.id;
+				}
+			},
+			template: '<div>'+
+					  'The previous page is {{prePage}} Page.'+
+					  '<br />'+
+					  'This is {{page}} Page.'+
+					  '</div>'
+		};
+		var Timeline = {
+			template: '<div id="timeline">'+
+					  'This is HomePage.'+
+					  '<br />'+
+					  '<router-link :to="{name:\'desc\',params:{id:\'Front\'}}">Front Page</router-link>'+
+					  '&nbsp;&nbsp;'+
+					  '<router-link :to="{name:\'desc\',params:{id:\'Back\'}}">Back Page</router-link>'+
+					  '<router-view></router-view>'+
+					  '</div>'
+		};
+		var Pins = {
+			template: '<div>'+
+					  'This is PinsPage.'+
+					  '</div>'
+		};
+		/*3. 创建router对象*/
+		var router = new VueRouter({
+			routes:[
+				{
+					path:'/timeline',
+					component: Timeline,
+					children:[
+					/*动态路由参数*/
+						{
+							path:':id',
+							name: 'desc',
+							component: Desc
+						}
+					]
+				},
+				{
+					path:'/pins',
+					component: Pins
+				}
+			]
+		});
+		/*4.挂载router，使用router-link和router-view绘制页面*/
+		new Vue({
+			el:'#app',
+			router,
+			template: '<div>'+
+					  '<router-link to="/timeline">Home Page</router-link>'+
+					  '&nbsp;&nbsp;'+
+					  '<router-link to="/pins">Pins</router-link>'+
+					  '<router-view></router-view>'+
+					  "</div>"
+
+		});
+	</script>
+</body>
+</html>

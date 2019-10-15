@@ -1,0 +1,44 @@
+<!-- 多重父子组件之间通信 -->
+<div id='app'>
+	<p>This is top component.</p>
+	<!-- 1. :msg='msg' 给子组件传值 
+			使用自定义事件@get-data接受子组件的传值【HTML不区分大小写，所以不能使用驼峰式命名属性（事件）】-->
+	<One :msg='msg' @get-data='getData'/>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script type="text/javascript">
+	Vue.component('Three',{
+		/*4. 使用{{$attrs}}接受父组件传过来的对象
+		     使用this.$emit触发父组件的事件*/
+		template: "<div id='three'><h2>This is three component.</h2><p @click='clickHandler'>{{$attrs}}</p></div>",
+		methods: {
+			clickHandler(){
+				this.$emit('get-data','This is data from three component.')
+			}
+		}
+	});
+	Vue.component('Two',{
+		/*3. 使用v-bind='$attrs'将父组件传过来的对象传给子组件
+			 使用v-on='$listeners'监听子组件的事件*/
+		template: "<div id='two'><h2>This is two component.</h2><Three v-bind='$attrs' v-on='$listeners'/></div>"
+	});
+	Vue.component('One',{
+		/*2. 使用v-bind='$attrs'将父组件传过来的对象传给子组件
+			 使用v-on='$listeners'监听子组件的事件*/
+		template: "<div id='one'><h1>This is one component.</h1><Two v-bind='$attrs' v-on='$listeners'/></div>"
+	});
+	new Vue({
+		el: '#app',
+		data(){
+			return {
+				msg : '1'
+			}
+		},
+		methods:{
+			getData(val){
+				console.log('VUE Copmponent : '+val);
+			}
+		}
+	});
+</script>

@@ -1,0 +1,15 @@
+<div id='app'>
+	<!-- 1. 关联属性 ref='xxx'-->
+	<button ref='btn'>Button</button>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script type="text/javascript">
+	new Vue({
+		el: '#app',
+		mounted() {
+			/*2. 根据关联属性获取DOM对象 this.$refs.xxx*/
+			console.log(this.$refs.btn);
+		}
+	});
+</script>
