@@ -6,16 +6,15 @@ import java.io.BufferedReader;
 import java.io.BufferedWriter;
 import java.io.FileReader;
 import java.io.FileWriter;
-import java.net.URL;
 
 public class JavaTools {
 
-	public static final int BUILDER_TYPE_APPEND = 1;
-	public static final int BUILDER_TYPE_PLUS = 2;
+	public static final int SQL_BUILDER_TYPE_APPEND = 1;
+	public static final int SQL_BUILDER_TYPE_PLUS = 2;
 
 	public static void sqlBuilder(int type, String path){
 		try(BufferedReader br = new BufferedReader(new FileReader(path))) {
-			if(type == BUILDER_TYPE_APPEND){
+			if(type == SQL_BUILDER_TYPE_APPEND){
 				System.out.println("StringBuilder sql = new StringBuilder();");
 				System.out.println("sql");
 				String context;
