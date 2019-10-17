@@ -13,7 +13,7 @@ public class JavaTools {
 	public static final int BUILDER_TYPE_APPEND = 1;
 	public static final int BUILDER_TYPE_PLUS = 2;
 
-	public static void printBuilder(int type, String path){
+	public static void sqlBuilder(int type, String path){
 		try(BufferedReader br = new BufferedReader(new FileReader(path))) {
 			if(type == BUILDER_TYPE_APPEND){
 				System.out.println("StringBuilder sql = new StringBuilder();");
