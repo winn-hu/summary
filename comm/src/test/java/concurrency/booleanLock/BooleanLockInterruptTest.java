@@ -1,10 +1,11 @@
 package concurrency.booleanLock;
 
-import java.util.Random;
 import java.util.concurrent.TimeUnit;
-import java.util.stream.IntStream;
 
-public class BooleanLockTest {
+/**
+ * 测试阻塞中断
+ */
+public class BooleanLockInterruptTest {
 
     private final Lock lock = new BooleanLock();
 
@@ -12,8 +13,7 @@ public class BooleanLockTest {
         try {
             lock.lock();
             System.out.println(Thread.currentThread().getName()+" get lock.");
-            int random = new Random().nextInt(10);
-            TimeUnit.SECONDS.sleep(random);
+            TimeUnit.HOURS.sleep(1);
         } catch (InterruptedException e) {
             e.printStackTrace();
         } finally {
@@ -22,17 +22,17 @@ public class BooleanLockTest {
         }
     }
 
-    public static void main(String[] args) throws InterruptedException {
-        BooleanLockTest test = new BooleanLockTest();
-        /*IntStream.range(0,10)
-                .mapToObj(i -> new Thread(test::syncMethod))
-                .forEach(Thread::start);*/
 
-        Thread t1 = new Thread(test::syncMethod,"t1");
-        t1.start();
+    public static void main(String[] args) throws InterruptedException {
+        BooleanLockInterruptTest test = new BooleanLockInterruptTest();
+
+        new Thread(test::syncMethod,"t1").start();
+        TimeUnit.MILLISECONDS.sleep(3);
         Thread t2 = new Thread(test::syncMethod, "t2");
         t2.start();
-        TimeUnit.MILLISECONDS.sleep(8);
+        TimeUnit.MILLISECONDS.sleep(3);
         t2.interrupt();
+        System.out.println(t2.isInterrupted()); //true
+        System.out.println(t2.getState());  //RUNNABLE
     }
 }
