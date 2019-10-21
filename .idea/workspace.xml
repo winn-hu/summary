@@ -58,10 +58,6 @@
       <change afterPath="$PROJECT_DIR$/springAOP/target/classes/com/blueStarWei/aop/service/impl/CaculationServiceImpl.class" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/springAOP/target/classes/com/blueStarWei/aop/service/impl/ComparableServiceImpl.class" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/springAOP/target/test-classes/com/blueStarWei/aop/Demo.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/demo/src/main/java/FileUpload.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/springAOP/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/springAOP/pom.xml" afterDir="false" />
@@ -112,7 +108,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/springAOP/src/main/java/com/blueStarWei/aop/aspect/ComparableAspect.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="285">
@@ -121,6 +117,28 @@
                 <element signature="imports" expanded="true" />
               </folding>
             </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/comm/comm.iml">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/.idea/misc.xml">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/.idea/modules.xml">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-1767" />
           </provider>
         </entry>
       </file>
@@ -135,15 +153,6 @@
                 <element signature="e#230#231#0" expanded="true" />
                 <element signature="e#278#279#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/springAOP/src/main/java/com/blueStarWei/aop/service/ComparableService.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="38">
-              <caret line="2" column="17" selection-start-line="2" selection-start-column="17" selection-end-line="2" selection-end-column="17" />
             </state>
           </provider>
         </entry>
@@ -311,7 +320,7 @@
     <ConfirmationsSetting value="1" id="Add" />
   </component>
   <component name="ProjectView">
-    <navigator proportions="" version="1">
+    <navigator currentView="Scope" currentSubView="Scope 'Project Files'; set:Project Files; class com.intellij.psi.search.scope.ProjectFilesScope" proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
@@ -331,25 +340,12 @@
           <expand>
             <path>
               <item name="summary" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="demo" type="2674bda8:ScopeViewTreeModel$GroupNode" />
+              <item name="F:\summary" type="442cc68d:ScopeViewTreeModel$RootNode" />
             </path>
             <path>
               <item name="summary" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="demo" type="2674bda8:ScopeViewTreeModel$GroupNode" />
-              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-            </path>
-            <path>
-              <item name="summary" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="demo" type="2674bda8:ScopeViewTreeModel$GroupNode" />
-              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="main" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-            </path>
-            <path>
-              <item name="summary" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="demo" type="2674bda8:ScopeViewTreeModel$GroupNode" />
-              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="main" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="java" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="F:\summary" type="442cc68d:ScopeViewTreeModel$RootNode" />
+              <item name=".idea" type="9f88c78c:ScopeViewTreeModel$FileNode" />
             </path>
           </expand>
           <select />
@@ -518,13 +514,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1561530851644</updated>
-    </task>
-    <task id="LOCAL-00005" summary="add new">
-      <created>1561710901279</created>
-      <option name="number" value="00005" />
-      <option name="presentableId" value="LOCAL-00005" />
-      <option name="project" value="LOCAL" />
-      <updated>1561710901279</updated>
     </task>
     <task id="LOCAL-00006" summary="performance test">
       <created>1561710944562</created>
@@ -862,7 +851,14 @@
       <option name="project" value="LOCAL" />
       <updated>1571464381526</updated>
     </task>
-    <option name="localTasksCounter" value="54" />
+    <task id="LOCAL-00054" summary="config file">
+      <created>1571650194647</created>
+      <option name="number" value="00054" />
+      <option name="presentableId" value="LOCAL-00054" />
+      <option name="project" value="LOCAL" />
+      <updated>1571650194648</updated>
+    </task>
+    <option name="localTasksCounter" value="55" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -983,7 +979,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="maven compiler 1.8" />
     <MESSAGE value="security util" />
     <MESSAGE value="json util" />
     <MESSAGE value="performance test" />
@@ -1008,7 +1003,8 @@
     <MESSAGE value="dev tools" />
     <MESSAGE value="redis" />
     <MESSAGE value="Boolean Lock" />
-    <option name="LAST_COMMIT_MESSAGE" value="Boolean Lock" />
+    <MESSAGE value="config file" />
+    <option name="LAST_COMMIT_MESSAGE" value="config file" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1067,27 +1063,6 @@
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/vue/组件通信.txt">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vue/bindClass.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="114">
-          <caret line="6" column="24" selection-start-line="6" selection-start-column="24" selection-end-line="6" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vue/component.html">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vue/computed.html">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/springAOP/springAOP.iml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-103" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/demo/src/main/java/classLoader/ApplicationClassLoader.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="38">
@@ -1446,6 +1421,25 @@
             <element signature="imports" expanded="true" />
           </folding>
         </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/comm/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-513" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/comm/comm.iml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.idea/misc.xml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.idea/modules.xml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1767" />
       </provider>
     </entry>
   </component>
