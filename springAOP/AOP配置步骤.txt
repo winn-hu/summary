@@ -1,0 +1,23 @@
+1.导包  pom.xml
+2.配置文件 applicationContext.xml
+3.创建接口
+4.创建接口实现类
+    类定义上增加@Component("@id名"),提醒spring此类创建的对象bean id为"@id名"
+5.创建切面处理类
+    类定义上增加 @Aspect @Component
+    切面处理方法增加切面类型和过滤处理条件,如: @Before
+6.测试
+
+
+Person person = null;
+try {
+      //1. 前置通知 @Before
+      person = service.getPersonById(1);
+
+} catch (Exception e) {
+      e.printStackTrace();
+      //3.2 异常通知 @AfterThrowing
+}
+//2. 后置通知 @After
+return person;
+//3.1 返回通知 @AfterReturning
