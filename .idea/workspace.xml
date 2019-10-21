@@ -1,19 +1,81 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="6a13768e-100a-4b10-add9-3d6b4ed68269" name="Default Changelist" comment="">
+    <list default="true" id="6a13768e-100a-4b10-add9-3d6b4ed68269" name="Default Changelist" comment="redis">
+      <change afterPath="$PROJECT_DIR$/comm/target/classes/META-INF/comm.kotlin_module" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/comm/target/classes/concurrency/SyncDefect.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/comm/target/classes/concurrency/booleanLock/BooleanLock.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/comm/target/classes/concurrency/booleanLock/Lock.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/comm/target/classes/config.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/comm/target/classes/demo.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/comm/target/classes/img/email.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/comm/target/classes/img/qrcode.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/comm/target/classes/img/zxing.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/comm/target/classes/lib/Qrcode_A.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/comm/target/classes/lib/qrcode_B.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/comm/target/classes/sql.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/comm/target/classes/tools/JavaTools.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/comm/target/classes/utils/Constant.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/comm/target/classes/utils/JsonUtil.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/comm/target/classes/utils/ObjectFactory.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/comm/target/classes/utils/PropertyUtil.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/comm/target/classes/utils/QRCodeUtils.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/comm/target/classes/utils/RSAUtil.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/comm/target/classes/utils/SecurityUtil$MD5_LENGTH.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/comm/target/classes/utils/SecurityUtil.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/comm/target/classes/utils/StringUtils.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/comm/target/classes/utils/ZxingUtils.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/comm/target/classes/utils/ZxingWithLogoUtils.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/comm/target/classes/utils/pojo/MyQRCodeImage.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/comm/target/test-classes/META-INF/comm.kotlin_module" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/comm/target/test-classes/concurrency/booleanLock/BooleanLockInterruptTest.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/comm/target/test-classes/concurrency/booleanLock/BooleanLockTimeOutTest.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/comm/target/test-classes/utils/JsonUtilTest.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/comm/target/test-classes/utils/ObjectFactoryTest.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/comm/target/test-classes/utils/Person.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/comm/target/test-classes/utils/PropertyUtilTest.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/comm/target/test-classes/utils/QRCodeTest.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/comm/target/test-classes/utils/SecurityUtilTest.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/comm/target/test-classes/utils/ZxingTest.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/redis/target/classes/META-INF/redis.kotlin_module" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/redis/target/classes/com/blueStarWei/DataTypeDemo.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/redis/target/classes/com/blueStarWei/TestClusterRedis.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/redis/target/classes/com/blueStarWei/TestSingleRedis.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/redis/target/test-classes/com/blueStarWei/AppTest.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/springAOP/AOP配置步骤.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/springAOP/src/main/java/com/blueStarWei/aop/aspect/CaculatorAspect.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/springAOP/src/main/java/com/blueStarWei/aop/aspect/ComparableAspect.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/springAOP/src/main/java/com/blueStarWei/aop/service/CaculationService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/springAOP/src/main/java/com/blueStarWei/aop/service/ComparableService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/springAOP/src/main/java/com/blueStarWei/aop/service/impl/CaculationServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/springAOP/src/main/java/com/blueStarWei/aop/service/impl/ComparableServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/springAOP/target/classes/META-INF/springAOP.kotlin_module" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/springAOP/target/classes/applicationContext.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/springAOP/target/classes/com/blueStarWei/aop/aspect/CaculatorAspect.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/springAOP/target/classes/com/blueStarWei/aop/aspect/ComparableAspect.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/springAOP/target/classes/com/blueStarWei/aop/service/CaculationService.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/springAOP/target/classes/com/blueStarWei/aop/service/ComparableService.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/springAOP/target/classes/com/blueStarWei/aop/service/impl/CaculationServiceImpl.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/springAOP/target/classes/com/blueStarWei/aop/service/impl/ComparableServiceImpl.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/springAOP/target/test-classes/com/blueStarWei/aop/Demo.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/src/main/java/FileUpload.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/springAOP/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/springAOP/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/springAOP/springAOP.iml" beforeDir="false" afterPath="$PROJECT_DIR$/springAOP/springAOP.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/springAOP/target/classes/applicationContext.xml" beforeDir="false" afterPath="$PROJECT_DIR$/springAOP/target/classes/applicationContext.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/springAOP/target/classes/com/blueStarWei/aop/Demo.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/springAOP/target/classes/com/blueStarWei/aop/LogAspect.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/springAOP/target/classes/com/blueStarWei/aop/PersonService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/springAOP/target/classes/com/blueStarWei/aop/PersonServiceImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/springAOP/src/main/java/com/blueStarWei/aop/LogAspect.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/springAOP/src/main/java/com/blueStarWei/aop/PersonService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/springAOP/src/main/java/com/blueStarWei/aop/PersonServiceImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/springAOP/src/main/test/com/blueStarWei/aop/Demo.java" beforeDir="false" afterPath="$PROJECT_DIR$/springAOP/src/main/test/com/blueStarWei/aop/Demo.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/comm/target/" />
     <ignored path="$PROJECT_DIR$/demo/target/" />
     <ignored path="$PROJECT_DIR$/target/" />
     <ignored path="$PROJECT_DIR$/springAOP/target/" />
+    <ignored path="$PROJECT_DIR$/redis/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -26,19 +88,10 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/demo/src/main/java/concurrency/attributes/Priority.java">
+        <entry file="file://$PROJECT_DIR$/springAOP/src/main/test/com/blueStarWei/aop/Demo.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="285">
-              <caret line="15" column="34" selection-start-line="15" selection-start-column="34" selection-end-line="15" selection-end-column="34" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/demo/src/main/java/concurrency/attributes/UncaughtExceptionDemo.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="209">
-              <caret line="11" column="5" lean-forward="true" selection-start-line="7" selection-start-column="4" selection-end-line="11" selection-end-column="5" />
+            <state relative-caret-position="458">
+              <caret line="28" column="5" selection-start-line="28" selection-start-column="5" selection-end-line="28" selection-end-column="5" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -46,15 +99,79 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/demo/src/main/java/concurrency/attributes/ThreadExceptionResolve.java">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/springAOP/src/main/java/com/blueStarWei/aop/aspect/CaculatorAspect.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="523">
-              <caret line="29" column="1" lean-forward="true" selection-start-line="2" selection-end-line="29" selection-end-column="1" />
+            <state relative-caret-position="133">
+              <caret line="23" column="30" selection-start-line="23" selection-start-column="30" selection-end-line="23" selection-end-column="30" />
+              <folding>
+                <element signature="e#719#720#0" expanded="true" />
+                <element signature="e#757#758#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/springAOP/src/main/java/com/blueStarWei/aop/aspect/ComparableAspect.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="285">
+              <caret line="15" column="34" selection-start-line="15" selection-start-column="34" selection-end-line="15" selection-end-column="34" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#237#238#0" expanded="true" />
-                <element signature="e#299#300#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/springAOP/src/main/java/com/blueStarWei/aop/service/impl/ComparableServiceImpl.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="171">
+              <caret line="9" selection-start-line="9" selection-end-line="9" />
+              <folding>
+                <element signature="e#135#136#0" expanded="true" />
+                <element signature="e#159#160#0" expanded="true" />
+                <element signature="e#230#231#0" expanded="true" />
+                <element signature="e#278#279#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/springAOP/src/main/java/com/blueStarWei/aop/service/ComparableService.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="38">
+              <caret line="2" column="17" selection-start-line="2" selection-start-column="17" selection-end-line="2" selection-end-column="17" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/springAOP/src/main/java/com/blueStarWei/aop/service/CaculationService.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="38">
+              <caret line="2" column="25" selection-start-line="2" selection-start-column="17" selection-end-line="2" selection-end-column="34" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/springAOP/src/main/java/com/blueStarWei/aop/service/impl/CaculationServiceImpl.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="114">
+              <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#240#241#0" expanded="true" />
+                <element signature="e#264#265#0" expanded="true" />
+                <element signature="e#286#287#0" expanded="true" />
+                <element signature="e#320#321#0" expanded="true" />
+                <element signature="e#366#367#0" expanded="true" />
+                <element signature="e#400#401#0" expanded="true" />
+                <element signature="e#444#445#0" expanded="true" />
+                <element signature="e#478#479#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -89,6 +206,7 @@
       <find>RunnableQueue</find>
       <find>queue</find>
       <find>formatDate</find>
+      <find>returnResource</find>
     </findStrings>
     <replaceStrings>
       <replace>LogisticsUtil</replace>
@@ -96,6 +214,9 @@
       <replace>e.printStackTrace();</replace>
       <replace>taskQueue</replace>
     </replaceStrings>
+    <dirStrings>
+      <dir>F:\summary\redis4j</dir>
+    </dirStrings>
   </component>
   <component name="Git.Settings">
     <option name="PREVIOUS_COMMIT_AUTHORS">
@@ -108,46 +229,10 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/demo/src/main/java/concurrency/threadPattern/singleThreadExcution/Passager.java" />
-        <option value="$PROJECT_DIR$/demo/src/main/java/concurrency/threadPattern/singleThreadExcution/FlightSecurity.java" />
-        <option value="$PROJECT_DIR$/demo/src/main/java/concurrency/threadPattern/singleThreadExcution/flight/FlightSecurity.java" />
-        <option value="$PROJECT_DIR$/demo/src/main/java/concurrency/threadPattern/singleThreadExcution/meal/Tableware.java" />
-        <option value="$PROJECT_DIR$/demo/src/main/java/concurrency/threadPattern/singleThreadExcution/meal/EatNodleThread.java" />
-        <option value="$PROJECT_DIR$/demo/src/main/java/concurrency/threadPattern/singleThreadExcution/meal/TablewarePair.java" />
-        <option value="$PROJECT_DIR$/demo/src/main/java/concurrency/threadPattern/singleThreadExcution/meal/EatNodleThreadExt.java" />
-        <option value="$PROJECT_DIR$/demo/src/main/java/concurrency/effectiveJava/builder/NutritionFacts.java" />
-        <option value="$PROJECT_DIR$/comm/src/main/java/tool/SqlBuilderUtil.java" />
-        <option value="$PROJECT_DIR$/comm/src/main/java/utils/SqlBuilderUtil.java" />
-        <option value="$PROJECT_DIR$/comm/src/test/java/utils/SqlBuilderUtilTest.java" />
-        <option value="$PROJECT_DIR$/demo/src/main/java/classLoader/ApplicationClassLoader.java" />
-        <option value="$PROJECT_DIR$/demo/src/main/java/concurrency/cycle/FlagThreadExit.java" />
-        <option value="$PROJECT_DIR$/demo/src/main/java/concurrency/cycle/CreateThreadByPool.java" />
-        <option value="$PROJECT_DIR$/demo/src/main/java/concurrency/cycle/CreateThreadByFixedPool.java" />
-        <option value="$PROJECT_DIR$/demo/src/main/java/concurrency/cycle/CreateThreadByCachedPool.java" />
-        <option value="$PROJECT_DIR$/demo/src/main/java/concurrency/threadpool/CreateThreadByCachedPool.java" />
-        <option value="$PROJECT_DIR$/demo/src/main/java/concurrency/threadpool/CreateThreadByScheduledPool.java" />
-        <option value="$PROJECT_DIR$/demo/src/main/java/concurrency/threadpool/CreateThreadBySingleThreadPool.java" />
-        <option value="$PROJECT_DIR$/demo/src/main/java/builder/NutritionFacts.java" />
-        <option value="$PROJECT_DIR$/demo/src/main/java/effectiveJava/builder/NutritionFacts.java" />
-        <option value="$PROJECT_DIR$/demo/src/main/java/concurrency/api/WaitDemo.java" />
-        <option value="$PROJECT_DIR$/comm/src/main/java/utils/ObjectFactory.java" />
-        <option value="$PROJECT_DIR$/comm/src/main/java/utils/pojo/MyQRCodeImage.java" />
-        <option value="$PROJECT_DIR$/demo/src/main/java/concurrency/readWriteLock/Lock.java" />
-        <option value="$PROJECT_DIR$/demo/src/main/java/concurrency/readWriteLock/WriteLock.java" />
-        <option value="$PROJECT_DIR$/demo/src/main/java/concurrency/readWriteLock/ReadWriteLockImpl.java" />
-        <option value="$PROJECT_DIR$/demo/src/main/java/concurrency/readWriteLock/ReadWriteLock.java" />
-        <option value="$PROJECT_DIR$/demo/src/main/java/concurrency/readWriteLock/ReadLock.java" />
-        <option value="$PROJECT_DIR$/demo/src/main/java/concurrency/finalObject/IntegerAccumulator.java" />
-        <option value="$PROJECT_DIR$/demo/src/main/java/concurrency/finalObject/FinalIntegerAccumulator.java" />
-        <option value="$PROJECT_DIR$/demo/src/main/java/FileUpload.java" />
-        <option value="$PROJECT_DIR$/pom.xml" />
-        <option value="$PROJECT_DIR$/comm/pom.xml" />
         <option value="$PROJECT_DIR$/comm/src/main/java/utils/RSAUtil.java" />
-        <option value="$PROJECT_DIR$/springAOP/pom.xml" />
         <option value="$PROJECT_DIR$/springAOP/src/main/webapp/WEB-INF/web.xml" />
         <option value="$PROJECT_DIR$/springAOP/src/main/webapp/WEB-INF/applicationContext.xml" />
         <option value="$PROJECT_DIR$/springAOP/src/resources/applicationContext.xml" />
-        <option value="$PROJECT_DIR$/springAOP/src/main/java/com/blueStarWei/aop/PersonService.java" />
         <option value="$PROJECT_DIR$/demo/src/main/java/concurrency/threadPattern/future/Future.java" />
         <option value="$PROJECT_DIR$/demo/src/main/java/concurrency/threadPattern/future/FutureService.java" />
         <option value="$PROJECT_DIR$/README.md" />
@@ -159,6 +244,42 @@
         <option value="$PROJECT_DIR$/demo/src/main/java/concurrency/attributes/Priority.java" />
         <option value="$PROJECT_DIR$/demo/src/main/java/concurrency/attributes/UncaughtExceptionDemo.java" />
         <option value="$PROJECT_DIR$/demo/src/main/java/concurrency/attributes/ThreadExceptionResolve.java" />
+        <option value="$PROJECT_DIR$/demo/src/main/java/concurrency/ThreadContext.java" />
+        <option value="$PROJECT_DIR$/comm/src/main/java/utils/StringUtils.java" />
+        <option value="$PROJECT_DIR$/comm/src/test/java/utils/SqlBuilderUtilTest.java" />
+        <option value="$PROJECT_DIR$/comm/src/main/java/tools/SqlBuilderUtil.java" />
+        <option value="$PROJECT_DIR$/demo/src/test/java/algorithm/LeastRecentlyUseTest.java" />
+        <option value="$PROJECT_DIR$/demo/src/main/java/algorithm/LeastRecentlyUse.java" />
+        <option value="$PROJECT_DIR$/comm/src/main/java/tools/RemoveAnnotation.java" />
+        <option value="$PROJECT_DIR$/comm/src/main/java/tools/SqlBuilder.java" />
+        <option value="$PROJECT_DIR$/comm/src/main/java/tools/JavaTools.java" />
+        <option value="$PROJECT_DIR$/redis/src/main/java/com/blueStarWei/TestClusterRedis.java" />
+        <option value="$PROJECT_DIR$/redis/pom.xml" />
+        <option value="$PROJECT_DIR$/redis/src/main/java/com/blueStarWei/App.java" />
+        <option value="$PROJECT_DIR$/redis/src/main/java/com/blueStarWei/DataTypeDemo.java" />
+        <option value="$PROJECT_DIR$/redis/src/main/java/com/blueStarWei/TestSingleRedis.java" />
+        <option value="$PROJECT_DIR$/redis/src/main/resources/docs/applicationContext-cluster.xml" />
+        <option value="$PROJECT_DIR$/demo/src/main/java/FileUpload.java" />
+        <option value="$PROJECT_DIR$/comm/src/main/java/concurrency/SyncDefect.java" />
+        <option value="$PROJECT_DIR$/comm/src/main/java/concurrency/booleanLock/Lock.java" />
+        <option value="$PROJECT_DIR$/comm/src/test/java/concurrency/booleanLock/BooleanLockTest2.java" />
+        <option value="$PROJECT_DIR$/comm/src/test/java/concurrency/booleanLock/BooleanLockTest.java" />
+        <option value="$PROJECT_DIR$/comm/src/main/java/concurrency/booleanLock/BooleanLock.java" />
+        <option value="$PROJECT_DIR$/comm/src/test/java/concurrency/booleanLock/BooleanLockInterruptTest.java" />
+        <option value="$PROJECT_DIR$/comm/src/test/java/concurrency/booleanLock/BooleanLockTimeOutTest.java" />
+        <option value="$PROJECT_DIR$/springAOP/AOP配置步骤.txt" />
+        <option value="$PROJECT_DIR$/springAOP/pom.xml" />
+        <option value="$PROJECT_DIR$/springAOP/src/main/java/com/blueStarWei/aop/PersonService.java" />
+        <option value="$PROJECT_DIR$/springAOP/src/main/java/com/blueStarWei/aop/PersonServiceImpl.java" />
+        <option value="$PROJECT_DIR$/springAOP/src/main/java/com/blueStarWei/aop/CaculationServiceImpl.java" />
+        <option value="$PROJECT_DIR$/springAOP/src/main/java/com/blueStarWei/aop/LogAspect.java" />
+        <option value="$PROJECT_DIR$/springAOP/src/main/java/com/blueStarWei/aop/ComparableService.java" />
+        <option value="$PROJECT_DIR$/springAOP/src/main/java/com/blueStarWei/aop/ComparableServiceImpl.java" />
+        <option value="$PROJECT_DIR$/springAOP/src/main/java/com/blueStarWei/aop/service/CaculationService.java" />
+        <option value="$PROJECT_DIR$/springAOP/src/main/java/com/blueStarWei/aop/aspect/LogAspect.java" />
+        <option value="$PROJECT_DIR$/springAOP/src/main/test/com/blueStarWei/aop/Demo.java" />
+        <option value="$PROJECT_DIR$/springAOP/src/main/java/com/blueStarWei/aop/aspect/CaculatorAspect.java" />
+        <option value="$PROJECT_DIR$/springAOP/src/main/java/com/blueStarWei/aop/aspect/ComparableAspect.java" />
       </list>
     </option>
   </component>
@@ -190,18 +311,45 @@
     <ConfirmationsSetting value="1" id="Add" />
   </component>
   <component name="ProjectView">
-    <navigator currentView="Scope" currentSubView="Scope 'Project Files'; set:Project Files; class com.intellij.psi.search.scope.ProjectFilesScope" proportions="" version="1">
+    <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
       <pane id="ProjectPane" />
+      <pane id="PackagesPane" />
       <pane id="Scope">
         <subPane subId="Scope 'Default Changelist'; set:Default Changelist; class com.intellij.packageDependencies.ChangeListScope">
           <expand>
             <path>
               <item name="summary" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
               <item name="F:\summary" type="442cc68d:ScopeViewTreeModel$RootNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+        <subPane subId="Scope 'Project Files'; set:Project Files; class com.intellij.psi.search.scope.ProjectFilesScope">
+          <expand>
+            <path>
+              <item name="summary" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="demo" type="2674bda8:ScopeViewTreeModel$GroupNode" />
+            </path>
+            <path>
+              <item name="summary" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="demo" type="2674bda8:ScopeViewTreeModel$GroupNode" />
+              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+            <path>
+              <item name="summary" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="demo" type="2674bda8:ScopeViewTreeModel$GroupNode" />
+              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="main" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+            <path>
+              <item name="summary" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="demo" type="2674bda8:ScopeViewTreeModel$GroupNode" />
+              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="main" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="java" type="9f88c78c:ScopeViewTreeModel$FileNode" />
             </path>
           </expand>
           <select />
@@ -216,20 +364,17 @@
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit4" value="" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.includeInheritedMembers" value="true" />
     <property name="create.test.in.the.same.root" value="true" />
+    <property name="extract.method.default.visibility" value="private" />
     <property name="last_directory_selection" value="$PROJECT_DIR$/springAOP/src/main/test" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/comm/src/main/resources" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/springAOP" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+    <property name="settings.editor.selected.configurable" value="reference.projectsettings.compiler.javacompiler" />
   </component>
   <component name="RecentsManager">
-    <key name="CreateClassDialog.RecentsKey">
-      <recent name="concurrency.readWriteLock" />
-      <recent name="concurrency.threadPool.factory" />
-      <recent name="concurrency.threadPool" />
-    </key>
     <key name="CreateTestDialog.RecentsKey">
+      <recent name="algorithm" />
       <recent name="utils" />
       <recent name="concurrency.booleanLock" />
       <recent name="utils.test" />
@@ -242,25 +387,31 @@
       <recent name="utils" />
       <recent name="spider" />
     </key>
-    <key name="CopyFile.RECENT_KEYS">
+    <key name="MoveFile.RECENT_KEYS">
       <recent name="F:\summary\comm\src\main\resources" />
-      <recent name="F:\summary\vue" />
+      <recent name="F:\summary\comm\src\main\java\tools" />
+      <recent name="F:\summary\springAOP\src\main\test" />
+      <recent name="F:\summary\springAOP\src" />
+      <recent name="F:\summary\springAOP\src\main\java" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
       <recent name="F:\summary\springAOP" />
+      <recent name="F:\summary\redis\src\main\resources" />
+      <recent name="F:\summary\redis\src\main\java\com\blueStarWei" />
+      <recent name="F:\summary\comm\src\main\resources" />
       <recent name="F:\summary\comm\src\main\java\utils" />
-      <recent name="F:\summary\demo\src\main\java\concurrency\cycle" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="concurrency.booleanLock" />
       <recent name="concurrency.finalObject" />
       <recent name="concurrency.threadpool" />
       <recent name="concurrency.cycle" />
       <recent name="concurrency" />
     </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="F:\summary\springAOP\src\main\test" />
-      <recent name="F:\summary\springAOP\src" />
-      <recent name="F:\summary\springAOP\src\main\java" />
-      <recent name="F:\summary\springAOP\src\main\resources" />
-      <recent name="F:\summary\java" />
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="concurrency.readWriteLock" />
+      <recent name="concurrency.threadPool.factory" />
+      <recent name="concurrency.threadPool" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -275,13 +426,13 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.ThreadExceptionResolve">
-    <configuration name="ThreadExceptionResolve" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="concurrency.attributes.ThreadExceptionResolve" />
-      <module name="demo" />
+  <component name="RunManager" selected="JUnit.Demo.testDeclareParents">
+    <configuration name="BooleanLockTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="concurrency.booleanLock.BooleanLockTest" />
+      <module name="comm" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="concurrency.attributes.*" />
+          <option name="PATTERN" value="concurrency.booleanLock.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -289,12 +440,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ThreadGroupDemo" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="concurrency.attributes.ThreadGroupDemo" />
-      <module name="demo" />
+    <configuration name="BooleanLockTimeOutTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="concurrency.booleanLock.BooleanLockTimeOutTest" />
+      <module name="comm" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="concurrency.attributes.*" />
+          <option name="PATTERN" value="concurrency.booleanLock.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -302,12 +453,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="UncaughtExceptionDemo" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="concurrency.attributes.UncaughtExceptionDemo" />
-      <module name="demo" />
+    <configuration name="Demo" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.blueStarWei.aop.Demo" />
+      <module name="springAOP" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="concurrency.attributes.*" />
+          <option name="PATTERN" value="com.blueStarWei.aop.aspect.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -315,33 +466,33 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Priority.defaultPriority" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="demo" />
+    <configuration name="Demo.testAdvice" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="springAOP" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="concurrency.attributes.*" />
+          <option name="PATTERN" value="com.blueStarWei.aop.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="concurrency.attributes" />
-      <option name="MAIN_CLASS_NAME" value="concurrency.attributes.Priority" />
-      <option name="METHOD_NAME" value="defaultPriority" />
+      <option name="PACKAGE_NAME" value="com.blueStarWei.aop" />
+      <option name="MAIN_CLASS_NAME" value="com.blueStarWei.aop.Demo" />
+      <option name="METHOD_NAME" value="testAdvice" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Priority.extendFather" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="demo" />
+    <configuration name="Demo.testDeclareParents" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="springAOP" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="concurrency.attributes.*" />
+          <option name="PATTERN" value="com.blueStarWei.aop.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="concurrency.attributes" />
-      <option name="MAIN_CLASS_NAME" value="concurrency.attributes.Priority" />
-      <option name="METHOD_NAME" value="extendFather" />
+      <option name="PACKAGE_NAME" value="com.blueStarWei.aop" />
+      <option name="MAIN_CLASS_NAME" value="com.blueStarWei.aop.Demo" />
+      <option name="METHOD_NAME" value="testDeclareParents" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -349,11 +500,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.ThreadExceptionResolve" />
-        <item itemvalue="Application.UncaughtExceptionDemo" />
-        <item itemvalue="Application.ThreadGroupDemo" />
-        <item itemvalue="JUnit.Priority.extendFather" />
-        <item itemvalue="JUnit.Priority.defaultPriority" />
+        <item itemvalue="JUnit.Demo.testDeclareParents" />
+        <item itemvalue="JUnit.Demo.testAdvice" />
+        <item itemvalue="Application.Demo" />
+        <item itemvalue="Application.BooleanLockTimeOutTest" />
+        <item itemvalue="Application.BooleanLockTest" />
       </list>
     </recent_temporary>
   </component>
@@ -367,34 +518,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1561530851644</updated>
-    </task>
-    <task id="LOCAL-00001" summary="utils : Obeject Factory">
-      <created>1561534250807</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1561534250807</updated>
-    </task>
-    <task id="LOCAL-00002" summary="java module">
-      <created>1561538381470</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1561538381470</updated>
-    </task>
-    <task id="LOCAL-00003" summary="java module">
-      <created>1561538463048</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1561538463048</updated>
-    </task>
-    <task id="LOCAL-00004" summary="performance test">
-      <created>1561541129020</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1561541129020</updated>
     </task>
     <task id="LOCAL-00005" summary="add new">
       <created>1561710901279</created>
@@ -641,39 +764,137 @@
       <option name="project" value="LOCAL" />
       <updated>1569470519340</updated>
     </task>
-    <option name="localTasksCounter" value="40" />
+    <task id="LOCAL-00040" summary="spring aop">
+      <created>1571120129612</created>
+      <option name="number" value="00040" />
+      <option name="presentableId" value="LOCAL-00040" />
+      <option name="project" value="LOCAL" />
+      <updated>1571120129612</updated>
+    </task>
+    <task id="LOCAL-00041" summary="remove classes">
+      <created>1571120656644</created>
+      <option name="number" value="00041" />
+      <option name="presentableId" value="LOCAL-00041" />
+      <option name="project" value="LOCAL" />
+      <updated>1571120656644</updated>
+    </task>
+    <task id="LOCAL-00042" summary="remove classes">
+      <created>1571120878786</created>
+      <option name="number" value="00042" />
+      <option name="presentableId" value="LOCAL-00042" />
+      <option name="project" value="LOCAL" />
+      <updated>1571120878786</updated>
+    </task>
+    <task id="LOCAL-00043" summary="spring aop">
+      <created>1571121311824</created>
+      <option name="number" value="00043" />
+      <option name="presentableId" value="LOCAL-00043" />
+      <option name="project" value="LOCAL" />
+      <updated>1571121311824</updated>
+    </task>
+    <task id="LOCAL-00044" summary="vue">
+      <created>1571125117061</created>
+      <option name="number" value="00044" />
+      <option name="presentableId" value="LOCAL-00044" />
+      <option name="project" value="LOCAL" />
+      <updated>1571125117061</updated>
+    </task>
+    <task id="LOCAL-00045" summary="LRU">
+      <created>1571303934039</created>
+      <option name="number" value="00045" />
+      <option name="presentableId" value="LOCAL-00045" />
+      <option name="project" value="LOCAL" />
+      <updated>1571303934039</updated>
+    </task>
+    <task id="LOCAL-00046" summary="LRU test">
+      <created>1571303982885</created>
+      <option name="number" value="00046" />
+      <option name="presentableId" value="LOCAL-00046" />
+      <option name="project" value="LOCAL" />
+      <updated>1571303982885</updated>
+    </task>
+    <task id="LOCAL-00047" summary="dev tools">
+      <created>1571305224255</created>
+      <option name="number" value="00047" />
+      <option name="presentableId" value="LOCAL-00047" />
+      <option name="project" value="LOCAL" />
+      <updated>1571305224255</updated>
+    </task>
+    <task id="LOCAL-00048" summary="dev tools">
+      <created>1571305272263</created>
+      <option name="number" value="00048" />
+      <option name="presentableId" value="LOCAL-00048" />
+      <option name="project" value="LOCAL" />
+      <updated>1571305272263</updated>
+    </task>
+    <task id="LOCAL-00049" summary="dev tools">
+      <created>1571305317636</created>
+      <option name="number" value="00049" />
+      <option name="presentableId" value="LOCAL-00049" />
+      <option name="project" value="LOCAL" />
+      <updated>1571305317636</updated>
+    </task>
+    <task id="LOCAL-00050" summary="redis">
+      <created>1571365498628</created>
+      <option name="number" value="00050" />
+      <option name="presentableId" value="LOCAL-00050" />
+      <option name="project" value="LOCAL" />
+      <updated>1571365498629</updated>
+    </task>
+    <task id="LOCAL-00051" summary="redis">
+      <created>1571365735870</created>
+      <option name="number" value="00051" />
+      <option name="presentableId" value="LOCAL-00051" />
+      <option name="project" value="LOCAL" />
+      <updated>1571365735870</updated>
+    </task>
+    <task id="LOCAL-00052" summary="redis">
+      <created>1571365795582</created>
+      <option name="number" value="00052" />
+      <option name="presentableId" value="LOCAL-00052" />
+      <option name="project" value="LOCAL" />
+      <updated>1571365795582</updated>
+    </task>
+    <task id="LOCAL-00053" summary="Boolean Lock">
+      <created>1571464381525</created>
+      <option name="number" value="00053" />
+      <option name="presentableId" value="LOCAL-00053" />
+      <option name="project" value="LOCAL" />
+      <updated>1571464381526</updated>
+    </task>
+    <option name="localTasksCounter" value="54" />
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="StreamDemo_testSum - 2019.09.26 at 17h 28m 03s.xml">
-      <configuration name="StreamDemo.testSum" configurationId="JUnit" />
+    <history-entry file="BooleanLockTest_testlock - 2019.10.19 at 13h 13m 24s.xml">
+      <configuration name="BooleanLockTest.testlock" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="StreamDemo_testSum - 2019.09.26 at 17h 29m 02s.xml">
-      <configuration name="StreamDemo.testSum" configurationId="JUnit" />
+    <history-entry file="BooleanLockTest_testlock - 2019.10.19 at 13h 13m 51s.xml">
+      <configuration name="BooleanLockTest.testlock" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="StreamDemo_testSum - 2019.09.26 at 17h 39m 07s.xml">
-      <configuration name="StreamDemo.testSum" configurationId="JUnit" />
+    <history-entry file="Demo_testAdvice - 2019.10.21 at 16h 58m 59s.xml">
+      <configuration name="Demo.testAdvice" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="StreamDemo_testSum - 2019.09.26 at 17h 39m 56s.xml">
-      <configuration name="StreamDemo.testSum" configurationId="JUnit" />
+    <history-entry file="Demo_testDeclareParents - 2019.10.21 at 16h 59m 12s.xml">
+      <configuration name="Demo.testDeclareParents" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="StreamDemo_testSum - 2019.09.26 at 17h 51m 34s.xml">
-      <configuration name="StreamDemo.testSum" configurationId="JUnit" />
+    <history-entry file="Demo_testDeclareParents - 2019.10.21 at 17h 02m 40s.xml">
+      <configuration name="Demo.testDeclareParents" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="Priority_extendFather - 2019.10.03 at 22h 13m 49s.xml">
-      <configuration name="Priority.extendFather" configurationId="JUnit" />
+    <history-entry file="Demo_testDeclareParents - 2019.10.21 at 17h 03m 39s.xml">
+      <configuration name="Demo.testDeclareParents" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="Priority_extendFather - 2019.10.03 at 22h 14m 36s.xml">
-      <configuration name="Priority.extendFather" configurationId="JUnit" />
+    <history-entry file="Demo_testDeclareParents - 2019.10.21 at 17h 06m 17s.xml">
+      <configuration name="Demo.testDeclareParents" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="Priority_extendFather - 2019.10.03 at 22h 14m 58s.xml">
-      <configuration name="Priority.extendFather" configurationId="JUnit" />
+    <history-entry file="Demo_testDeclareParents - 2019.10.21 at 17h 06m 51s.xml">
+      <configuration name="Demo.testDeclareParents" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="Priority_defaultPriority - 2019.10.03 at 22h 16m 54s.xml">
-      <configuration name="Priority.defaultPriority" configurationId="JUnit" />
+    <history-entry file="Demo_testDeclareParents - 2019.10.21 at 17h 07m 18s.xml">
+      <configuration name="Demo.testDeclareParents" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="Priority_extendFather - 2019.10.03 at 22h 16m 58s.xml">
-      <configuration name="Priority.extendFather" configurationId="JUnit" />
+    <history-entry file="Demo_testDeclareParents - 2019.10.21 at 17h 07m 52s.xml">
+      <configuration name="Demo.testDeclareParents" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="TodoView">
@@ -688,7 +909,7 @@
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.36662197" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.21849866" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="UI Designer" order="3" />
@@ -697,7 +918,7 @@
       <window_info id="Capture Tool" order="6" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.5127479" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49865952" weight="0.30736545" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49865952" visible="true" weight="0.30736545" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39943343" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -762,16 +983,10 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="java module" />
-    <MESSAGE value="add new" />
-    <MESSAGE value="QR code" />
-    <MESSAGE value="QR Code" />
-    <MESSAGE value="json" />
     <MESSAGE value="maven compiler 1.8" />
     <MESSAGE value="security util" />
     <MESSAGE value="json util" />
     <MESSAGE value="performance test" />
-    <MESSAGE value="Boolean Lock" />
     <MESSAGE value="DEMO" />
     <MESSAGE value="demo config" />
     <MESSAGE value="QRCode" />
@@ -785,9 +1000,15 @@
     <MESSAGE value="utils" />
     <MESSAGE value="final object" />
     <MESSAGE value="create sql string" />
-    <MESSAGE value="vue" />
+    <MESSAGE value="remove classes" />
     <MESSAGE value="spring aop" />
-    <option name="LAST_COMMIT_MESSAGE" value="spring aop" />
+    <MESSAGE value="vue" />
+    <MESSAGE value="LRU" />
+    <MESSAGE value="LRU test" />
+    <MESSAGE value="dev tools" />
+    <MESSAGE value="redis" />
+    <MESSAGE value="Boolean Lock" />
+    <option name="LAST_COMMIT_MESSAGE" value="Boolean Lock" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -797,6 +1018,14 @@
           <line>13</line>
           <properties />
           <option name="timeStamp" value="4" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/redis/src/main/java/com/blueStarWei/DataTypeDemo.java</url>
+          <line>104</line>
+          <properties class="com.blueStarWei.DataTypeDemo">
+            <option name="EMULATED" value="true" />
+          </properties>
+          <option name="timeStamp" value="7" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
@@ -838,251 +1067,8 @@
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/demo/src/main/java/concurrency/threadpool/CreateThreadByFixedPool.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-131">
-          <caret line="3" column="38" lean-forward="true" selection-start-line="3" selection-start-column="38" selection-end-line="3" selection-end-column="38" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/demo/src/main/java/concurrency/threadpool/CreateThreadByCachedPool.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="95">
-          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/demo/src/main/java/concurrency/threadpool/CreateThreadBySingleThreadPool.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="15" column="21" lean-forward="true" selection-start-line="15" selection-start-column="21" selection-end-line="15" selection-end-column="21" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/demo/src/main/java/concurrency/cycle/FlagThreadExit.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="228">
-          <caret line="12" column="53" lean-forward="true" selection-start-line="12" selection-start-column="53" selection-end-line="12" selection-end-column="53" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/comm/src/main/java/utils/JsonUtil.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="570">
-          <caret line="46" column="5" selection-start-line="46" selection-start-column="5" selection-end-line="46" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/demo/src/main/java/concurrency/HookThread.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="361">
-          <caret line="19" column="44" selection-start-line="19" selection-start-column="29" selection-end-line="19" selection-end-column="44" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/demo/src/main/java/concurrency/api/WaitDemo.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="46" column="1" lean-forward="true" selection-start-line="5" selection-end-line="46" selection-end-column="1" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/demo/src/main/java/effectiveJava/builder/NutritionFacts.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="532">
-          <caret line="64" column="24" selection-start-line="64" selection-start-column="24" selection-end-line="64" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/comm/src/main/java/utils/Constant.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="76">
-          <caret line="4" column="63" selection-start-line="4" selection-start-column="43" selection-end-line="4" selection-end-column="63" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/comm/src/main/java/utils/pojo/MyQRCodeImage.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="228">
-          <caret line="18" lean-forward="true" selection-start-line="18" selection-end-line="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/comm/src/main/java/utils/ObjectFactory.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="15" column="42" lean-forward="true" selection-start-line="15" selection-start-column="42" selection-end-line="15" selection-end-column="42" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#8247#8248#0" expanded="true" />
-            <element signature="e#8284#8285#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_171/jre/lib/rt.jar!/java/lang/String.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-4408">
-          <caret line="24" column="21" lean-forward="true" selection-start-line="24" selection-start-column="21" selection-end-line="24" selection-end-column="21" />
-          <folding>
-            <element signature="e#0#35943#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_171/src.zip!/java/util/stream/IntStream.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="184">
-          <caret line="795" column="24" selection-start-line="795" selection-start-column="19" selection-end-line="795" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/demo/src/main/java/concurrency/readWriteLock/ReadLock.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="266">
-          <caret line="15" column="37" selection-start-line="15" selection-start-column="24" selection-end-line="15" selection-end-column="37" />
-          <folding>
-            <element signature="e#174#175#0" expanded="true" />
-            <element signature="e#224#225#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/demo/src/main/java/concurrency/readWriteLock/WriteLock.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="76">
-          <caret line="4" selection-start-line="4" selection-end-line="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/demo/src/main/java/concurrency/readWriteLock/ReadWriteLockImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1197">
-          <caret line="71" lean-forward="true" selection-start-line="71" selection-end-line="71" />
-          <folding>
-            <element signature="e#387#388#0" expanded="true" />
-            <element signature="e#413#414#0" expanded="true" />
-            <element signature="e#644#645#0" expanded="true" />
-            <element signature="e#680#681#0" expanded="true" />
-            <element signature="e#964#965#0" expanded="true" />
-            <element signature="e#991#992#0" expanded="true" />
-            <element signature="e#936#937#0" expanded="true" />
-            <element signature="e#966#967#0" expanded="true" />
-            <element signature="e#1007#1008#0" expanded="true" />
-            <element signature="e#1037#1038#0" expanded="true" />
-            <element signature="e#1078#1079#0" expanded="true" />
-            <element signature="e#1108#1109#0" expanded="true" />
-            <element signature="e#1003#1004#0" expanded="true" />
-            <element signature="e#1033#1034#0" expanded="true" />
-            <element signature="e#1314#1315#0" expanded="true" />
-            <element signature="e#1345#1346#0" expanded="true" />
-            <element signature="e#1398#1399#0" expanded="true" />
-            <element signature="e#1436#1437#0" expanded="true" />
-            <element signature="e#1468#1469#0" expanded="true" />
-            <element signature="e#1496#1497#0" expanded="true" />
-            <element signature="e#1534#1535#0" expanded="true" />
-            <element signature="e#1568#1569#0" expanded="true" />
-            <element signature="e#1623#1624#0" expanded="true" />
-            <element signature="e#1669#1670#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/demo/src/main/java/concurrency/readWriteLock/ReadWriteLock.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-321">
-          <caret line="7" column="7" lean-forward="true" selection-start-line="7" selection-start-column="7" selection-end-line="7" selection-end-column="7" />
-          <folding>
-            <element signature="e#467#468#0" expanded="true" />
-            <element signature="e#513#514#0" expanded="true" />
-            <element signature="e#576#577#0" expanded="true" />
-            <element signature="e#634#635#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/demo/src/main/java/concurrency/readWriteLock/Lock.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="38">
-          <caret line="2" column="17" selection-start-line="2" selection-start-column="17" selection-end-line="2" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/demo/src/main/java/concurrency/finalObject/IntegerAccumulator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="95">
-          <caret line="5" column="33" lean-forward="true" selection-start-line="5" selection-start-column="33" selection-end-line="5" selection-end-column="33" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/demo/src/main/java/concurrency/finalObject/FinalIntegerAccumulator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="361">
-          <caret line="21" column="51" lean-forward="true" selection-start-line="21" selection-start-column="51" selection-end-line="21" selection-end-column="51" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#570#571#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml" />
-    <entry file="file://$PROJECT_DIR$/comm/src/main/java/utils/RSAUtil.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4750">
-          <caret line="252" column="11" lean-forward="true" selection-start-line="252" selection-start-column="11" selection-end-line="252" selection-end-column="11" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_171/jre/lib/jce.jar!/javax/crypto/Cipher.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="209">
-          <caret line="50" column="28" selection-start-line="50" selection-start-column="28" selection-end-line="50" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/springAOP/src/main/webapp/WEB-INF/log4j.xml" />
-    <entry file="file://$PROJECT_DIR$/springAOP/src/main/webapp/WEB-INF/applicationContext.xml" />
-    <entry file="file://$PROJECT_DIR$/comm/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="760">
-          <caret line="40" column="21" selection-start-line="40" selection-start-column="21" selection-end-line="40" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/springAOP/src/main/java/com/blueStarWei/aop/PersonServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="95">
-          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/demo/src/main/java/concurrency/threadPattern/future/Future.java" />
-    <entry file="file://$PROJECT_DIR$/demo/src/main/java/concurrency/threadPattern/future/FutureService.java" />
-    <entry file="file://$PROJECT_DIR$/demo/src/main/java/FileUpload.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="76">
-          <caret line="4" column="10" selection-start-line="4" selection-start-column="10" selection-end-line="4" selection-end-column="10" />
-        </state>
-      </provider>
+    <entry file="file://$PROJECT_DIR$/vue/组件通信.txt">
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/vue/bindClass.html">
       <provider selected="true" editor-type-id="text-editor">
@@ -1091,108 +1077,239 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/vue/vue.html">
+    <entry file="file://$PROJECT_DIR$/vue/component.html">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/springAOP/src/main/test/com/blueStarWei/aop/Demo.java">
+    <entry file="file://$PROJECT_DIR$/vue/computed.html">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/springAOP/springAOP.iml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="228">
-          <caret line="13" selection-start-line="13" selection-end-line="13" />
+        <state relative-caret-position="-103" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/demo/src/main/java/classLoader/ApplicationClassLoader.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="38">
+          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vue/filter.html">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vue/lifeCycle.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-906" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/comm/src/main/java/utils/StringUtils.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="133">
+          <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/comm/src/test/java/utils/SqlBuilderUtilTest.java" />
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_171/src.zip!/java/lang/IllegalArgumentException.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-464">
+          <caret line="50" column="35" selection-start-line="50" selection-start-column="11" selection-end-line="50" selection-end-column="35" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="e#828#829#0" expanded="true" />
+            <element signature="e#852#853#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_171/src.zip!/java/util/Scanner.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="19">
-          <caret line="1" column="25" selection-start-line="1" selection-start-column="25" selection-end-line="1" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_171/src.zip!/java/lang/Object.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="154">
-          <caret line="62" column="33" selection-start-line="62" selection-start-column="33" selection-end-line="62" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_171/src.zip!/java/util/Properties.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="154">
-          <caret line="433" selection-start-line="433" selection-end-line="433" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/comm/src/main/java/utils/PropertiesUtil.java" />
-    <entry file="file://$PROJECT_DIR$/comm/src/main/resources/ssb.properties" />
-    <entry file="file://$PROJECT_DIR$/demo/src/main/java/jdK8/StreamDemo.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="190">
-          <caret line="10" column="26" lean-forward="true" selection-start-line="10" selection-start-column="26" selection-end-line="10" selection-end-column="26" />
+        <state relative-caret-position="60">
+          <caret line="362" column="53" lean-forward="true" selection-start-line="362" selection-start-column="53" selection-end-line="362" selection-end-column="53" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="e#13776#13792#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/comm/src/main/java/utils/SqlBuilderUtil.java">
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_171/src.zip!/java/util/stream/Node.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="74">
+          <caret line="60" lean-forward="true" selection-start-line="60" selection-end-line="60" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_171/jre/lib/rt.jar!/sun/misc/LRUCache.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="114">
-          <caret line="7" column="60" selection-start-line="7" selection-start-column="40" selection-end-line="7" selection-end-column="60" />
+          <caret line="9" column="27" lean-forward="true" selection-start-line="9" selection-start-column="27" selection-end-line="9" selection-end-column="27" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/springAOP/pom.xml">
+    <entry file="file://$PROJECT_DIR$/demo/src/test/java/algorithm/LeastRecentlyUseTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="247">
-          <caret line="13" column="51" selection-start-line="13" selection-start-column="51" selection-end-line="13" selection-end-column="51" />
+        <state relative-caret-position="192">
+          <caret line="19" column="27" lean-forward="true" selection-start-line="19" selection-start-column="27" selection-end-line="19" selection-end-column="27" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/springAOP/src/main/java/com/blueStarWei/aop/PersonService.java">
+    <entry file="file://$PROJECT_DIR$/demo/src/main/java/algorithm/LeastRecentlyUse.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="95">
-          <caret line="5" selection-start-line="5" selection-end-line="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/springAOP/src/resources/applicationContext.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="228">
-          <caret line="12" column="28" selection-start-line="12" selection-start-column="28" selection-end-line="12" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/springAOP/src/main/webapp/WEB-INF/web.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="336">
-          <caret line="80" selection-start-line="80" selection-end-line="80" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/springAOP/src/main/java/com/blueStarWei/aop/LogAspect.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="228">
-          <caret line="14" column="1" selection-start-line="14" selection-start-column="1" selection-end-line="14" selection-end-column="1" />
+        <state relative-caret-position="1910">
+          <caret line="103" column="37" lean-forward="true" selection-start-line="103" selection-start-column="37" selection-end-line="103" selection-end-column="37" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_171/src.zip!/java/lang/Runnable.java">
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_171/src.zip!/java/util/HashMap.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="528">
-          <caret line="67" column="25" selection-start-line="67" selection-start-column="25" selection-end-line="67" selection-end-column="25" />
+        <state relative-caret-position="323">
+          <caret line="300" column="31" lean-forward="true" selection-start-line="300" selection-start-column="31" selection-end-line="300" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_171/src.zip!/java/lang/Class.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="184">
+          <caret line="2261" column="40" selection-start-line="2261" selection-start-column="25" selection-end-line="2261" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/comm/src/main/resources/config.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/comm/src/main/resources/sql.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="152">
+          <caret line="8" column="36" selection-start-line="8" selection-start-column="36" selection-end-line="8" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/comm/src/main/java/tools/RemoveAnnotation.java" />
+    <entry file="file://$PROJECT_DIR$/comm/src/main/java/tools/JavaTools.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-399">
+          <caret line="9" column="24" selection-start-line="9" selection-start-column="24" selection-end-line="9" selection-end-column="24" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/redis/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="10" column="16" selection-start-line="10" selection-start-column="16" selection-end-line="10" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/redis/clients/jedis/3.1.0/jedis-3.1.0.jar!/redis/clients/jedis/ShardedJedisPool.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="172">
+          <caret line="47" column="33" selection-start-line="47" selection-start-column="19" selection-end-line="47" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/redis/clients/jedis/3.1.0/jedis-3.1.0-sources.jar!/redis/clients/jedis/ShardedJedisPool.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="320">
+          <caret line="48" column="17" selection-start-line="48" selection-start-column="17" selection-end-line="48" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/redis/clients/jedis/3.1.0/jedis-3.1.0-sources.jar!/redis/clients/jedis/Client.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="154">
+          <caret line="473" column="14" selection-start-line="473" selection-start-column="14" selection-end-line="473" selection-end-column="14" />
+          <folding>
+            <element signature="e#13030#13031#0" expanded="true" />
+            <element signature="e#13069#13070#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/redis/clients/jedis/3.1.0/jedis-3.1.0-sources.jar!/redis/clients/jedis/Jedis.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="146">
+          <caret line="41" column="9" selection-start-line="41" selection-start-column="9" selection-end-line="41" selection-end-column="9" />
+          <folding>
+            <element signature="e#1473#1474#0" expanded="true" />
+            <element signature="e#1494#1495#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/redis/src/main/java/com/blueStarWei/DataTypeDemo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="171">
+          <caret line="126" column="6" lean-forward="true" selection-start-line="126" selection-start-column="6" selection-end-line="126" selection-end-column="6" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#3380#3381#0" expanded="true" />
+            <element signature="e#3411#3412#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/redis/src/main/java/com/blueStarWei/TestSingleRedis.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1463">
+          <caret line="77" column="12" selection-start-line="77" selection-start-column="12" selection-end-line="77" selection-end-column="12" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/redis/src/main/resources/docs/applicationContext-cluster.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-207">
+          <caret line="4" column="24" lean-forward="true" selection-start-line="4" selection-start-column="24" selection-end-line="4" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/redis/src/main/resources/docs/Redis集群搭建文档.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="15" column="35" selection-start-line="15" selection-start-column="35" selection-end-line="15" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/redis/src/main/java/com/blueStarWei/TestClusterRedis.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="61">
+          <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/redis/src/test/java/com/blueStarWei/AppTest.java" />
+    <entry file="file://$PROJECT_DIR$/redis/src/main/resources/docs/ClusterTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="475">
+          <caret line="27" lean-forward="true" selection-start-line="27" selection-end-line="27" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/demo/src/main/java/FileUpload.java" />
+    <entry file="file://$PROJECT_DIR$/comm/src/main/java/concurrency/SyncDefect.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="287">
+          <caret line="26" column="31" selection-start-line="26" selection-start-column="31" selection-end-line="26" selection-end-column="31" />
         </state>
       </provider>
     </entry>
     <entry file="jar://C:/Program Files/Java/jdk1.8.0_171/src.zip!/java/lang/Thread.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="226">
-          <caret line="1948" column="27" selection-start-line="1948" selection-start-column="16" selection-end-line="1948" selection-end-column="43" />
+        <state relative-caret-position="132">
+          <caret line="300" column="30" selection-start-line="300" selection-start-column="30" selection-end-line="300" selection-end-column="30" />
           <folding>
             <element signature="e#17246#17247#0" expanded="true" />
             <element signature="e#17313#17314#0" expanded="true" />
@@ -1200,38 +1317,133 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/demo/src/main/java/concurrency/attributes/ThreadGroupDemo.java">
+    <entry file="file://$PROJECT_DIR$/comm/src/main/java/concurrency/booleanLock/Lock.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="209">
-          <caret line="11" column="7" lean-forward="true" selection-start-line="11" selection-start-column="7" selection-end-line="11" selection-end-column="7" />
+        <state relative-caret-position="361">
+          <caret line="20" column="1" selection-start-line="5" selection-end-line="20" selection-end-column="1" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/demo/src/main/java/concurrency/attributes/Priority.java">
+    <entry file="file://$PROJECT_DIR$/comm/src/main/java/concurrency/booleanLock/BooleanLock.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="15" column="34" selection-start-line="15" selection-start-column="34" selection-end-line="15" selection-end-column="34" />
+        <state relative-caret-position="76">
+          <caret line="7" selection-start-line="7" selection-end-line="84" selection-end-column="1" />
+          <folding>
+            <element signature="e#2660#2661#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/demo/src/main/java/concurrency/attributes/UncaughtExceptionDemo.java">
+    <entry file="file://$PROJECT_DIR$/comm/src/test/java/concurrency/booleanLock/BooleanLockInterruptTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="209">
-          <caret line="11" column="5" lean-forward="true" selection-start-line="7" selection-start-column="4" selection-end-line="11" selection-end-column="5" />
+        <state relative-caret-position="325">
+          <caret line="37" column="1" selection-start-line="4" selection-end-line="37" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/comm/src/test/java/concurrency/booleanLock/BooleanLockTimeOutTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="211">
+          <caret line="27" lean-forward="true" selection-start-line="27" selection-end-line="27" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/demo/src/main/java/concurrency/attributes/ThreadExceptionResolve.java">
+    <entry file="file://$PROJECT_DIR$/springAOP/AOP配置步骤.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="523">
-          <caret line="29" column="1" lean-forward="true" selection-start-line="2" selection-end-line="29" selection-end-column="1" />
+        <state relative-caret-position="399">
+          <caret line="21" column="14" selection-start-line="21" selection-start-column="14" selection-end-line="21" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/springAOP/src/resources/applicationContext.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="190">
+          <caret line="10" column="57" selection-start-line="10" selection-start-column="46" selection-end-line="10" selection-end-column="57" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/springAOP/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="361">
+          <caret line="19" column="44" lean-forward="true" selection-start-line="19" selection-start-column="44" selection-end-line="19" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/springAOP/src/main/java/com/blueStarWei/aop/service/ComparableService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="38">
+          <caret line="2" column="17" selection-start-line="2" selection-start-column="17" selection-end-line="2" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/springAOP/src/main/java/com/blueStarWei/aop/service/impl/CaculationServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="114">
+          <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#237#238#0" expanded="true" />
-            <element signature="e#299#300#0" expanded="true" />
+            <element signature="e#240#241#0" expanded="true" />
+            <element signature="e#264#265#0" expanded="true" />
+            <element signature="e#286#287#0" expanded="true" />
+            <element signature="e#320#321#0" expanded="true" />
+            <element signature="e#366#367#0" expanded="true" />
+            <element signature="e#400#401#0" expanded="true" />
+            <element signature="e#444#445#0" expanded="true" />
+            <element signature="e#478#479#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/springAOP/src/main/java/com/blueStarWei/aop/service/CaculationService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="38">
+          <caret line="2" column="25" selection-start-line="2" selection-start-column="17" selection-end-line="2" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/springAOP/src/main/java/com/blueStarWei/aop/service/impl/ComparableServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="171">
+          <caret line="9" selection-start-line="9" selection-end-line="9" />
+          <folding>
+            <element signature="e#135#136#0" expanded="true" />
+            <element signature="e#159#160#0" expanded="true" />
+            <element signature="e#230#231#0" expanded="true" />
+            <element signature="e#278#279#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/springAOP/src/main/java/com/blueStarWei/aop/aspect/CaculatorAspect.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="133">
+          <caret line="23" column="30" selection-start-line="23" selection-start-column="30" selection-end-line="23" selection-end-column="30" />
+          <folding>
+            <element signature="e#719#720#0" expanded="true" />
+            <element signature="e#757#758#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/springAOP/src/main/test/com/blueStarWei/aop/Demo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="458">
+          <caret line="28" column="5" selection-start-line="28" selection-start-column="5" selection-end-line="28" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/springAOP/src/main/java/com/blueStarWei/aop/aspect/ComparableAspect.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="15" column="34" selection-start-line="15" selection-start-column="34" selection-end-line="15" selection-end-column="34" />
+          <folding>
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1288,12 +1500,11 @@
       </state>
       <state key="ModuleStructureConfigurable.UI">
         <settings>
-          <last-edited>springAOP</last-edited>
+          <last-edited>redis</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
                 <option value="0.2" />
-                <option value="0.6" />
               </list>
             </option>
           </splitter-proportions>
