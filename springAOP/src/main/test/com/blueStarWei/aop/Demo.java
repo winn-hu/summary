@@ -1,6 +1,6 @@
 package com.blueStarWei.aop;
 
-import com.blueStarWei.aop.service.CaculationService;
+import com.blueStarWei.aop.service.CalculationService;
 import com.blueStarWei.aop.service.ComparableService;
 import org.junit.Test;
 import org.springframework.context.ApplicationContext;
@@ -12,13 +12,13 @@ public class Demo {
 
 	@Test
 	public void testAdvice() {
-		CaculationService service = (CaculationService) context.getBean("caculationService");
+		CalculationService service = (CalculationService) context.getBean("calculationService");
 		service.add(2,3);
-		System.out.println(">>>>>>>>>华丽的分割线>>>>>>>>>>>>>>>>>>>>>>>>");
+		System.out.println(">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>");
 		service.sub(2,6);
-		System.out.println(">>>>>>>>>华丽的分割线>>>>>>>>>>>>>>>>>>>>>>>>");
+		System.out.println(">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>");
 		service.divid(1,0);
-		System.out.println(">>>>>>>>>华丽的分割线>>>>>>>>>>>>>>>>>>>>>>>>");
+		System.out.println(">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>");
 
 	}
 

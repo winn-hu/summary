@@ -60,7 +60,7 @@ public class CaculatorAspect {
 	 * 		joinPoint.getSignature().getDeclaringTypeName() : 获取文件的包路径
 	 * @param e 需要使用throwing = "e"指定参数名
 	 */
-	@AfterThrowing(value = "execution(public int com.blueStarWei.aop.service.CaculationService.divid(..))",throwing = "e")
+	@AfterThrowing(value = "execution(public int com.blueStarWei.aop.service.CalculationService.divid(..))",throwing = "e")
 	public void afterThrowingMethod(JoinPoint joinPoint, ArithmeticException e) {
 		System.out.printf("An exception(%s) has been throwing in %s.",e.getMessage(),joinPoint.getSignature().getName());
 	}

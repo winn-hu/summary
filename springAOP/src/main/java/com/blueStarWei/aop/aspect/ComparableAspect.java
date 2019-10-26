@@ -16,6 +16,6 @@ public class ComparableAspect {
      * DeclareParents 引入通知：用来替换实现类
      * value中类的修饰符最好用*【我使用了public修饰符，报错】
      */
-    @DeclareParents(value = "* com.blueStarWei.aop.service.CaculationService", defaultImpl = ComparableServiceImpl.class)
+    @DeclareParents(value = "com.blueStarWei.aop.service.CalculationService", defaultImpl = ComparableServiceImpl.class)
     private ComparableService service;
 }
