@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ns2:student xmlns:ns2="fpgl">
+    <age>24</age>
+    <id>1001</id>
+    <name>Winn</name>
+</ns2:student>

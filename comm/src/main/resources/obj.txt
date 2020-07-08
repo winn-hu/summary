@@ -1,0 +1,3 @@
+name=winn
+age=27
+birthday=1992-12-03
