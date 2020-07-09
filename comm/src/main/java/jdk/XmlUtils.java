@@ -1,14 +1,11 @@
 package jdk;
 
-import sun.security.util.Resources;
-
 import javax.xml.bind.JAXBContext;
 import javax.xml.bind.JAXBException;
 import javax.xml.bind.Marshaller;
 import javax.xml.bind.Unmarshaller;
 import java.io.File;
 import java.io.InputStream;
-import java.util.Objects;
 
 /**
  * ²Î¿¼ÎÄµµ£ºhttps://www.w3cschool.cn/jaxb2/jaxb2-8wlz2zoz.html
