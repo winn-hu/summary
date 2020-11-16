@@ -15,7 +15,11 @@ public class NutritionFacts {
     //糖类含量
     private int carbohydrate;
 
-    public NutritionFacts(Builder builder) {
+    /**
+     * NutritionFacts是不可变的，不对外提供构造器
+     * @param builder
+     */
+    private NutritionFacts(Builder builder) {
         this.servingSize = builder.servingSize;
         this.servings = builder.servings;
         this.calories = builder.calories;
@@ -65,15 +69,10 @@ public class NutritionFacts {
         }
     }
 
-    @Override
-    public String toString() {
-        return "NutritionFacts{" +
-                "servingSize=" + servingSize +
-                ", servings=" + servings +
-                ", calories=" + calories +
-                ", fat=" + fat +
-                ", sodium=" + sodium +
-                ", carbohydrate=" + carbohydrate +
-                '}';
+    public static void main(String[] args) {
+        NutritionFacts facts = new NutritionFacts.Builder(1, 2)
+                                                .calories(3)
+                                                .fat(4)
+                                                .build();
     }
 }

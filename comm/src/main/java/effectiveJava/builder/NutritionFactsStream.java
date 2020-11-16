@@ -72,15 +72,7 @@ public class NutritionFactsStream {
         return this;
     }
 
-    @Override
-    public String toString() {
-        return "NutritionFactsStream{" +
-                "servingSize=" + servingSize +
-                ", servings=" + servings +
-                ", calories=" + calories +
-                ", fat=" + fat +
-                ", sodium=" + sodium +
-                ", carbohydrate=" + carbohydrate +
-                '}';
+    public static void main(String[] args) {
+        NutritionFactsStream nutritionFacts = new NutritionFactsStream().setServings(1).setServings(2);
     }
 }
