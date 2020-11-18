@@ -1,8 +1,7 @@
-package effectiveJava.proxy.v1;
+package effectiveJava.proxy.v0;
 
 import java.lang.reflect.InvocationHandler;
 import java.lang.reflect.Method;
-import java.lang.reflect.Proxy;
 
 public class HelloInvocation implements InvocationHandler {
     /**
@@ -24,13 +23,10 @@ public class HelloInvocation implements InvocationHandler {
      */
     @Override
     public Object invoke(Object proxy, Method method, Object[] args) throws Throwable {
-        System.out.println("Before Hello....");
+        System.out.println("HelloInvocation : Before Hello....");
         Object reslut = method.invoke(target, args);
-        System.out.println("after Hello....");
+        System.out.println("HelloInvocation : After Hello....");
         return reslut;
     }
 
-    public Object getProxyObject() {
-        return Proxy.newProxyInstance(target.getClass().getClassLoader(), target.getClass().getInterfaces(), this);
-    }
 }
