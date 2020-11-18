@@ -10,7 +10,9 @@ public class HelloInvocationDemo {
         chain.registAll(new LogIntercept(),new LogIntercept(),new LogIntercept());
 
         HelloService target = new HelloServiceImpl();
+
         target = (HelloService)chain.wrap(target);
         target.sayHello();
+
     }
 }
