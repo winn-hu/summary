@@ -3,7 +3,6 @@ package effectiveJava.proxy.v2;
 import java.lang.reflect.InvocationHandler;
 import java.lang.reflect.Method;
 import java.lang.reflect.Proxy;
-import java.util.ArrayList;
 import java.util.List;
 
 public class HelloInvocation implements InvocationHandler {
