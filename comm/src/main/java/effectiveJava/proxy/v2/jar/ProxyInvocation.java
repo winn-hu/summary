@@ -1,17 +1,17 @@
-package effectiveJava.proxy.v2;
+package effectiveJava.proxy.v2.jar;
 
 import java.lang.reflect.InvocationHandler;
 import java.lang.reflect.Method;
 import java.lang.reflect.Proxy;
 import java.util.List;
 
-public class HelloInvocation implements InvocationHandler {
+public class ProxyInvocation implements InvocationHandler {
 
     private Object target;
     private List<Interceptor> beforeInterceptors;
     private List<Interceptor> afterInterceptors;
 
-    public HelloInvocation(Object target, List<Interceptor> beforeInterceptors, List<Interceptor> afterInterceptors) {
+    public ProxyInvocation(Object target, List<Interceptor> beforeInterceptors, List<Interceptor> afterInterceptors) {
         this.target = target;
         this.beforeInterceptors = beforeInterceptors;
         this.afterInterceptors = afterInterceptors;
@@ -32,7 +32,7 @@ public class HelloInvocation implements InvocationHandler {
         return reslut;
     }
 
-    public Object getProxyObject() {
-        return Proxy.newProxyInstance(target.getClass().getClassLoader(), target.getClass().getInterfaces(), this);
+    public static Object getProxyObject(Object target,List<Interceptor> beforeInterceptors,List<Interceptor> afterInterceptors) {
+        return Proxy.newProxyInstance(target.getClass().getClassLoader(), target.getClass().getInterfaces(), new ProxyInvocation(target,beforeInterceptors,afterInterceptors));
     }
 }

@@ -11,7 +11,7 @@ import java.lang.reflect.Proxy;
 public class HelloInvocationDemo {
     public static void main(String[] args) {
         HelloServiceImpl helloService = new HelloServiceImpl();
-        HelloInvocation helloInvocation = new HelloInvocation(helloService);
+        ProxyInvocation helloInvocation = new ProxyInvocation(helloService);
         HelloService impl = (HelloService)Proxy.newProxyInstance(
                 helloService.getClass().getClassLoader(),
                 helloService.getClass().getInterfaces(),

@@ -1,4 +1,4 @@
-package effectiveJava.proxy.v2;
+package effectiveJava.proxy.v2.jar;
 
 public interface Interceptor {
 
