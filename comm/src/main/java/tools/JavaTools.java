@@ -1,5 +1,10 @@
 package tools;
 
+import net.sourceforge.pinyin4j.PinyinHelper;
+import net.sourceforge.pinyin4j.format.HanyuPinyinCaseType;
+import net.sourceforge.pinyin4j.format.HanyuPinyinOutputFormat;
+import net.sourceforge.pinyin4j.format.HanyuPinyinToneType;
+import net.sourceforge.pinyin4j.format.exception.BadHanyuPinyinOutputFormatCombination;
 import utils.StringUtils;
 
 import java.io.BufferedReader;
@@ -8,30 +13,6 @@ import java.io.FileReader;
 import java.io.FileWriter;
 
 public class JavaTools {
-
-	public static final int SQL_BUILDER_TYPE_APPEND = 1;
-	public static final int SQL_BUILDER_TYPE_PLUS = 2;
-
-	public static void sqlBuilder(int type, String path){
-		try(BufferedReader br = new BufferedReader(new FileReader(path))) {
-			if(type == SQL_BUILDER_TYPE_APPEND){
-				System.out.println("StringBuilder sql = new StringBuilder();");
-				System.out.println("sql");
-				String context;
-				while((context = br.readLine()) != null){
-					System.out.println(String.format(".append(\" %s \\n\")", context));
-				}
-			}else{
-				String context;
-				while((context = br.readLine()) != null){
-					System.out.println(String.format("\" %s \\n\"+", context));
-				}
-			}
-
-		} catch (Exception e) {
-			e.printStackTrace();
-		}
-	}
 
 	public static void romoveAnnotation(String srcPath, String destPath){
 
@@ -50,4 +31,19 @@ public class JavaTools {
 			e.printStackTrace();
 		}
 	}
+
+	public static String getHeadCharbyChinses(String chinese) throws BadHanyuPinyinOutputFormatCombination {
+		StringBuffer result = new StringBuffer();
+		HanyuPinyinOutputFormat format = new HanyuPinyinOutputFormat();
+		format.setCaseType(HanyuPinyinCaseType.UPPERCASE);
+		format.setToneType(HanyuPinyinToneType.WITHOUT_TONE);
+
+		char[] chars = chinese.toCharArray();
+		for (char val : chars) {
+			char headChar = PinyinHelper.toHanyuPinyinStringArray(val, format)[0].charAt(0);
+			result.append(headChar);
+		}
+		return result.toString();
+	}
+
 }
