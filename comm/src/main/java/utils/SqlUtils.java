@@ -2,7 +2,6 @@ package utils;
 
 import java.io.BufferedReader;
 import java.io.FileReader;
-import java.math.BigDecimal;
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -37,43 +36,6 @@ public class SqlUtils {
 
         } catch (Exception e) {
             e.printStackTrace();
-        }
-    }
-
-    public static void setParameters(PreparedStatement pstmt, List<Object> params) throws SQLException {
-        if (params == null) return;
-
-        for (int i = 0,size = params.size(); i < size; i++) {
-            Object o = params.get(i);
-            if (o instanceof String) {
-                pstmt.setString(i + 1, (String) o);
-            } else if (o instanceof Number) {
-                if (o instanceof Integer) {
-                    pstmt.setInt(i + 1, (Integer) o);
-                } else if (o instanceof Long) {
-                    pstmt.setLong(i + 1, (Long) o);
-                } else if (o instanceof BigDecimal) {
-                    pstmt.setBigDecimal(i + 1, (BigDecimal) o);
-                } else if (o instanceof Float) {
-                    pstmt.setFloat(i + 1, (Float) o);
-                } else if (o instanceof Double) {
-                    pstmt.setDouble(i + 1, (Double) o);
-                } else if (o instanceof Byte) {
-                    pstmt.setByte(i + 1, (Byte) o);
-                } else if (o instanceof Short) {
-                    pstmt.setShort(i + 1, (Short) o);
-                }
-            } else if (o instanceof Date) {
-                pstmt.setDate(i + 1, (Date) o);
-            } else if (o instanceof Timestamp) {
-                pstmt.setTimestamp(i + 1, (Timestamp) o);
-            } else if (o instanceof Boolean) {
-                pstmt.setBoolean(i + 1, (Boolean) o);
-            } else if (o instanceof Time) {
-                pstmt.setTime(i + 1, (Time) o);
-            } else {
-                pstmt.setObject(i + 1, o);
-            }
         }
     }
 
