@@ -2,7 +2,7 @@ package jdk.custom.queue;
 
 public class MyQueueDemo {
 	public static void main(String[] args) {
-		MyQueue<Integer> queue = new MyQueue<Integer>(10);
+		MyQueue<Integer> queue = new MyQueue<>(10);
 
 		queue.push(1);
 		queue.push(2);
