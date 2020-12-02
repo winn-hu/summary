@@ -13,6 +13,17 @@ import java.util.Map;
 public class RequestUtils {
 
     /**
+     *
+     * X-Forwarded-For：Squid 服务代理
+     *
+     * Proxy-Client-IP：apache 服务代理
+     *
+     * WL-Proxy-Client-IP：weblogic 服务代理
+     *
+     * HTTP_CLIENT_IP：有些代理服务器
+     *
+     * X-Real-IP：nginx服务代理
+     *
      * 记录非法请求ip
      */
     private Map<String, Integer> ipCountMap = new HashMap<>(20);
@@ -24,7 +35,7 @@ public class RequestUtils {
      * @return xx
      */
     public static String getIpAddr(HttpServletRequest request) {
-        String ip = request.getHeader("x-forwarded-for");
+        String ip = request.getHeader("X-Forwarded-For");
         if (ip == null || ip.length() == 0 || "unknown".equalsIgnoreCase(ip)) {
             ip = request.getHeader("Proxy-Client-IP");
         }
@@ -41,31 +52,22 @@ public class RequestUtils {
     }
 
     public static Map<String, Object> getParametersMap(HttpServletRequest request) {
+        Map<String, Object> tmp = new HashMap<>();
+
         Enumeration ss = request.getParameterNames();
-        Map<String, Object> tmp = new HashMap<>(10);
         while (ss.hasMoreElements()) {
             String key = ss.nextElement() + "";
             String value = request.getParameter(key);
-            if ("djxh".equalsIgnoreCase(key)) {
-                tmp.put(key.toLowerCase(), value);
-            } else {
-                tmp.put(key, value);
-            }
+            tmp.put(key, value);
         }
 
-        String swjgdm = (String) request.getSession().getAttribute("swjgdm");
-        String swjgmc = (String) request.getSession().getAttribute("swjgmc");
-        String swrysfdm = (String) request.getSession().getAttribute("swrysfdm");
-        String swrysfmc = (String) request.getSession().getAttribute("swrysfmc");
-        String swryxm = (String) request.getSession().getAttribute("swryxm");
-        String swrydm = (String) request.getSession().getAttribute("swrydm");
-        tmp.put("swjgdm", swjgdm);
-        tmp.put("swjgmc", swjgmc);
-        tmp.put("swryxm", swryxm);
-        tmp.put("swrydm", swrydm);
-        tmp.put("swrysfdm", swrysfdm);
-        tmp.put("swrysfmc", swrysfmc);
-        tmp.put("requestIp", getIpAddr(request));
+        Enumeration<String> attributeNames = request.getSession().getAttributeNames();
+        while (attributeNames.hasMoreElements()) {
+            String key = attributeNames.nextElement();
+            Object value = request.getSession().getAttribute(key);
+            tmp.put(key, value);
+        }
+
         return tmp;
     }
 
