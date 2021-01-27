@@ -5,7 +5,6 @@ import de.odysseus.staxon.json.JsonXMLConfigBuilder;
 import de.odysseus.staxon.json.JsonXMLInputFactory;
 import de.odysseus.staxon.xml.util.PrettyXMLEventWriter;
 import jdk.Student;
-import org.dom4j.io.SAXReader;
 import org.json.JSONObject;
 import org.json.XML;
 
@@ -50,8 +49,6 @@ public class XmlUtils {
     }
 
     public static String xmlToJson(String xml) {
-        //使用DOM4j
-        SAXReader saxReader = new SAXReader();
         //使用json的xml转json方法
         JSONObject jsonObject = XML.toJSONObject(xml);
         //设置缩进转为字符串
