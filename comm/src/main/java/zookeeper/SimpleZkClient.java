@@ -14,15 +14,7 @@ import java.util.List;
  */
 public class SimpleZkClient {
 
-    /**
-     * 172.23.34.13:2181,172.23.34.13:2183  会报错：
-     *      org.apache.zookeeper.KeeperException$ConnectionLossException: KeeperErrorCode = ConnectionLoss for
-     *
-     * 172.23.34.13:2181 可以正常连接
-     *
-     * Why ？
-     */
-    private static final String CONNECT_STRING = "172.23.34.13:2181";
+    private static final String CONNECT_STRING = "172.17.23.79:2181,172.17.23.79:2182";
 
     private static ZooKeeper zooKeeper;
 
