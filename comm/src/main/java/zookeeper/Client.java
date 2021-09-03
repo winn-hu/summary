@@ -1,8 +1,8 @@
 package zookeeper;
 
+import org.apache.zookeeper.Watcher;
 import org.apache.zookeeper.ZooKeeper;
 
-import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -16,24 +16,28 @@ public class Client {
 
     private ZooKeeper zooKeeper;
 
-    public Client() throws IOException {
+    public Client() throws Exception {
         this.zooKeeper = new ZooKeeper(CONNECT_STRING, TIME_OUT, watchedEvent -> {
-            System.out.println("watcher works.");
-            try {
+            //只监听“/clusterServer”的子节点变化
+            if(watchedEvent.getType() == Watcher.Event.EventType.NodeChildrenChanged
+                    && watchedEvent.getPath().startsWith("/clusterServer")) {
+                System.out.println("watcher works.");
                 getServers();
-            } catch (Exception e) {
-                e.printStackTrace();
             }
         });
     }
 
 
-    public void getServers() throws Exception {
+    public void getServers() {
         List<String> servers = new ArrayList<>();
-        List<String> children = zooKeeper.getChildren("/clusterServer", true, null);
-        for (String child : children) {
-            String server = getData("/clusterServer/"+child);
-            servers.add(server);
+        try {
+            List<String> children = zooKeeper.getChildren("/clusterServer", true, null);
+            for (String child : children) {
+                String server = getData("/clusterServer/"+child);
+                servers.add(server);
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
         }
         System.out.println(servers);
     }

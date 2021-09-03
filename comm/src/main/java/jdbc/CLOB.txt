@@ -1,0 +1,18 @@
+1.将txt文件存入数据库
+File file = new File("D:/test.txt");
+InputStream ins = new FileInputStream(file);
+byte[] buf = new byte[4096];
+char[] c = null;
+int nCount = 0;
+String s = "";
+while ((nCount = ins.read(buf)) != -1) {
+    s = new String(buf, 0, nCount);
+    c = s.toCharArray();
+}
+DBUtils.writeClob(c, c.length);
+ins.close();
+
+2.将数据库中的CLOB数据读出
+char[] ch = DBUtils.readClob("t_clob", "content", "clob_Id=6");
+      String string = new String(ch);
+      System.out.println("1+++++++++++++++"+string);

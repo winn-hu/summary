@@ -6,6 +6,7 @@ import org.junit.Before;
 import org.junit.Test;
 
 import java.io.IOException;
+import java.util.Collections;
 import java.util.List;
 
 /**
@@ -32,14 +33,80 @@ public class SimpleZkClient {
         }
     }
 
+
     /**
      * 创建节点: create
      */
     @Test
     public void create() throws KeeperException, InterruptedException {
         //参数：1，节点路径； 2，要存储的数据； 3，节点的权限； 4，节点的类型
-        String nodePath = zooKeeper.create("/java/2183", "This is Java Node 2183.".getBytes(), ZooDefs.Ids.OPEN_ACL_UNSAFE, CreateMode.PERSISTENT);
+        String nodePath = zooKeeper.create("/lock", "This is lock.".getBytes(), ZooDefs.Ids.OPEN_ACL_UNSAFE, CreateMode.PERSISTENT);
         System.out.println(nodePath);
+    }
+
+    /**
+     * 通过创建临时节点，实现服务器之间的独占锁
+     */
+    @Test
+    public void singleLock() {
+        try {
+            //参数：1，节点路径； 2，要存储的数据； 3，节点的权限； 4，节点的类型
+            String nodePath = zooKeeper.create("/lock", "This is Lock.".getBytes(), ZooDefs.Ids.OPEN_ACL_UNSAFE, CreateMode.EPHEMERAL);
+            //创建成功，则相当于拥有独占锁，可以进行以下逻辑
+            //TODO 业务逻辑
+            System.out.println(nodePath);
+            //业务逻辑结束后，删除节点，即释放锁资源
+            zooKeeper.delete("/lock", -1);
+        } catch (Exception e) {
+            //创建节点失败，重新调用，直至创建成功
+            if (e instanceof KeeperException && "NODEEXISTS".equals(((KeeperException)e).code().name())) {
+                System.out.println("Node exists.");
+                singleLock();
+            }else {
+                e.printStackTrace();
+            }
+        }
+    }
+
+    /**
+     * 通过创建临时节点，实现服务器之间的独占锁
+     */
+    @Test
+    public void singleLock2() throws KeeperException, InterruptedException {
+        Stat stat = zooKeeper.exists("/lock", false);
+        //如果节点已经存在，等待其它服务器删除节点。即：等待其它服务器释放锁资源
+        while(stat != null) {  }
+
+        //参数：1，节点路径； 2，要存储的数据； 3，节点的权限； 4，节点的类型
+        String nodePath = zooKeeper.create("/lock", "This is Lock.".getBytes(), ZooDefs.Ids.OPEN_ACL_UNSAFE, CreateMode.EPHEMERAL);
+        //创建成功，则相当于拥有独占锁，可以进行以下逻辑
+        //TODO 业务逻辑
+        System.out.println(nodePath);
+        //业务逻辑结束后，删除节点，即释放锁资源
+        zooKeeper.delete("/lock", -1);
+    }
+
+    /**
+     * 通过创建临时时序节点，实现服务器之间的时序锁
+     */
+    @Test
+    public void lock() throws KeeperException, InterruptedException {
+        //参数：1，节点路径； 2，要存储的数据； 3，节点的权限； 4，节点的类型
+        String nodePath = zooKeeper.create("/lock/sublock", "This is sub lock.".getBytes(), ZooDefs.Ids.OPEN_ACL_UNSAFE, CreateMode.EPHEMERAL_SEQUENTIAL);
+        System.out.println(nodePath);
+        //创建成功，则相当于拥有独占锁，可以进行以下逻辑
+        while(true) {
+            List<String> children = zooKeeper.getChildren("/lock", false);
+            Collections.sort(children);
+            if (nodePath.equals("/lock/"+children.get(0))){
+                //TODO 业务逻辑
+                System.out.println("TODO  Logic.");
+                break;
+            }
+        }
+
+        //业务逻辑结束后，删除节点，即释放锁资源
+        zooKeeper.delete(nodePath, -1);
     }
 
     /**
@@ -68,6 +135,8 @@ public class SimpleZkClient {
         System.out.printf("The data of %s is : %s \n",path, new String(bytes));
     }
 
+
+
     /**
      *
      * 异步获取节点内容： get
@@ -75,12 +144,7 @@ public class SimpleZkClient {
     @Test
     public void getDataAsync() {
         String path = "/java";
-        zooKeeper.getData(path, false, new AsyncCallback.DataCallback() {
-            @Override
-            public void processResult(int i, String s, Object o, byte[] bytes, Stat stat) {
-                System.out.printf("The data of %s is : %s \n",path, new String(bytes));
-            }
-        },"1000");
+        zooKeeper.getData(path, false, (i, s, o, bytes, stat) -> System.out.printf("The data of %s is : %s \n",path, new String(bytes)),"1000");
 
         try {
             Thread.sleep(20000);
@@ -123,8 +187,13 @@ public class SimpleZkClient {
      */
     @Test
     public void delete() throws KeeperException, InterruptedException {
+        List<String> children = zooKeeper.getChildren("/lock", false);
+        children.sort(String::compareTo);
+        System.out.println("/lock/"+children.get(0));
         //version = -1 : 匹配所有的版本
-        zooKeeper.delete("/java/2182", -1);
+        zooKeeper.delete("/lock/"+children.get(0), -1);
     }
+
+
 
 }
