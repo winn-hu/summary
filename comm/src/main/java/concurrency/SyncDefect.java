@@ -2,6 +2,13 @@ package concurrency;
 
 import java.util.concurrent.TimeUnit;
 
+/**
+ * synchronized缺陷：
+ * 1）不能控制等待时长
+ * 2）不能中断等待
+ *
+ * 使用booleanLock弥补缺陷
+ */
 public class SyncDefect {
 
     /**
