@@ -28,7 +28,11 @@ public class SimpleZkClient {
                     System.out.println("Connectted successful.");
                 }
             });
-        } catch (IOException e) {
+            //避免使用ZK时因为连接未完成报错
+            while(ZooKeeper.States.CONNECTED != zooKeeper.getState()) {
+                Thread.sleep(1000);
+            }
+        } catch (Exception e) {
             e.printStackTrace();
         }
     }

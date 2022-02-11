@@ -13,10 +13,14 @@ public class Server {
 
     private ZooKeeper zooKeeper;
 
-    public Server() throws IOException {
+    public Server() throws IOException, InterruptedException {
         this.zooKeeper = new ZooKeeper(CONNECT_STRING, TIME_OUT, watchedEvent -> {
 
         });
+        //避免使用ZK时因为连接未完成报错
+        while(ZooKeeper.States.CONNECTED != zooKeeper.getState()) {
+            Thread.sleep(1000);
+        }
     }
 
     /**
