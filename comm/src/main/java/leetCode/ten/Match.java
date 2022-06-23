@@ -18,6 +18,7 @@ public class Match {
             targetDeque.add(c);
         }
 
+
         Character preMatch = null;
         char[] matches = p.toCharArray();
         for (int i = 0, len = matches.length; i < len; i++) {

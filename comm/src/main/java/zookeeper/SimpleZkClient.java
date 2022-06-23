@@ -9,8 +9,8 @@ import java.util.Collections;
 import java.util.List;
 
 /**
- * ¶ÔÓÚ½ÚµãµÄ¼àÌıwatcher²Ù×÷£¬Ö»¼àÌıÒ»´Î£¬¿ÉÒÔÊ¹ÓÃÑ­»·¼àÌıµÄ·½Ê½½øĞĞÓÀ¾Ã¼àÌı£»
- * ÔÚ3.6.xµÄ°æ±¾¿ÉÒÔÊ¹ÓÃaddWatch·½·¨ÓÀ¾Ãµİ¹é¼àÌı¡£
+ * å¯¹äºèŠ‚ç‚¹çš„ç›‘å¬watcheræ“ä½œï¼Œåªç›‘å¬ä¸€æ¬¡ï¼Œå¯ä»¥ä½¿ç”¨å¾ªç¯ç›‘å¬çš„æ–¹å¼è¿›è¡Œæ°¸ä¹…ç›‘å¬ï¼›
+ * åœ¨3.6.xçš„ç‰ˆæœ¬å¯ä»¥ä½¿ç”¨addWatchæ–¹æ³•æ°¸ä¹…é€’å½’ç›‘å¬ã€‚
  */
 public class SimpleZkClient {
 
@@ -21,13 +21,13 @@ public class SimpleZkClient {
     @Before
     public void init() {
         try {
-            //³¬Ê±Ê±¼äµ¥Î»£ººÁÃë
+            //è¶…æ—¶æ—¶é—´å•ä½ï¼šæ¯«ç§’
             zooKeeper = new ZooKeeper(CONNECT_STRING, 15000, event -> {
                 if (event.getType() == Watcher.Event.EventType.None && event.getState() == Watcher.Event.KeeperState.SyncConnected) {
                     System.out.println("Connectted successful.");
                 }
             });
-            //±ÜÃâÊ¹ÓÃZKÊ±ÒòÎªÁ¬½ÓÎ´Íê³É±¨´í
+            //é¿å…ä½¿ç”¨ZKæ—¶å› ä¸ºè¿æ¥æœªå®ŒæˆæŠ¥é”™
             while(ZooKeeper.States.CONNECTED != zooKeeper.getState()) {
                 Thread.sleep(1000);
             }
@@ -38,30 +38,30 @@ public class SimpleZkClient {
 
 
     /**
-     * ´´½¨½Úµã: create
+     * åˆ›å»ºèŠ‚ç‚¹: create
      */
     @Test
     public void create() throws KeeperException, InterruptedException {
-        //²ÎÊı£º1£¬½ÚµãÂ·¾¶£» 2£¬Òª´æ´¢µÄÊı¾İ£» 3£¬½ÚµãµÄÈ¨ÏŞ£» 4£¬½ÚµãµÄÀàĞÍ
+        //å‚æ•°ï¼š1ï¼ŒèŠ‚ç‚¹è·¯å¾„ï¼› 2ï¼Œè¦å­˜å‚¨çš„æ•°æ®ï¼› 3ï¼ŒèŠ‚ç‚¹çš„æƒé™ï¼› 4ï¼ŒèŠ‚ç‚¹çš„ç±»å‹
         String nodePath = zooKeeper.create("/lock", "This is lock.".getBytes(), ZooDefs.Ids.OPEN_ACL_UNSAFE, CreateMode.PERSISTENT);
         System.out.println(nodePath);
     }
 
     /**
-     * Í¨¹ı´´½¨ÁÙÊ±½Úµã£¬ÊµÏÖ·şÎñÆ÷Ö®¼äµÄ¶ÀÕ¼Ëø
+     * é€šè¿‡åˆ›å»ºä¸´æ—¶èŠ‚ç‚¹ï¼Œå®ç°æœåŠ¡å™¨ä¹‹é—´çš„ç‹¬å é”
      */
     @Test
     public void singleLock() {
         try {
-            //²ÎÊı£º1£¬½ÚµãÂ·¾¶£» 2£¬Òª´æ´¢µÄÊı¾İ£» 3£¬½ÚµãµÄÈ¨ÏŞ£» 4£¬½ÚµãµÄÀàĞÍ
+            //å‚æ•°ï¼š1ï¼ŒèŠ‚ç‚¹è·¯å¾„ï¼› 2ï¼Œè¦å­˜å‚¨çš„æ•°æ®ï¼› 3ï¼ŒèŠ‚ç‚¹çš„æƒé™ï¼› 4ï¼ŒèŠ‚ç‚¹çš„ç±»å‹
             String nodePath = zooKeeper.create("/lock", "This is Lock.".getBytes(), ZooDefs.Ids.OPEN_ACL_UNSAFE, CreateMode.EPHEMERAL);
-            //´´½¨³É¹¦£¬ÔòÏàµ±ÓÚÓµÓĞ¶ÀÕ¼Ëø£¬¿ÉÒÔ½øĞĞÒÔÏÂÂß¼­
-            //TODO ÒµÎñÂß¼­
+            //åˆ›å»ºæˆåŠŸï¼Œåˆ™ç›¸å½“äºæ‹¥æœ‰ç‹¬å é”ï¼Œå¯ä»¥è¿›è¡Œä»¥ä¸‹é€»è¾‘
+            //TODO ä¸šåŠ¡é€»è¾‘
             System.out.println(nodePath);
-            //ÒµÎñÂß¼­½áÊøºó£¬É¾³ı½Úµã£¬¼´ÊÍ·ÅËø×ÊÔ´
+            //ä¸šåŠ¡é€»è¾‘ç»“æŸåï¼Œåˆ é™¤èŠ‚ç‚¹ï¼Œå³é‡Šæ”¾é”èµ„æº
             zooKeeper.delete("/lock", -1);
         } catch (Exception e) {
-            //´´½¨½ÚµãÊ§°Ü£¬ÖØĞÂµ÷ÓÃ£¬Ö±ÖÁ´´½¨³É¹¦
+            //åˆ›å»ºèŠ‚ç‚¹å¤±è´¥ï¼Œé‡æ–°è°ƒç”¨ï¼Œç›´è‡³åˆ›å»ºæˆåŠŸ
             if (e instanceof KeeperException && "NODEEXISTS".equals(((KeeperException)e).code().name())) {
                 System.out.println("Node exists.");
                 singleLock();
@@ -72,48 +72,48 @@ public class SimpleZkClient {
     }
 
     /**
-     * Í¨¹ı´´½¨ÁÙÊ±½Úµã£¬ÊµÏÖ·şÎñÆ÷Ö®¼äµÄ¶ÀÕ¼Ëø
+     * é€šè¿‡åˆ›å»ºä¸´æ—¶èŠ‚ç‚¹ï¼Œå®ç°æœåŠ¡å™¨ä¹‹é—´çš„ç‹¬å é”
      */
     @Test
     public void singleLock2() throws KeeperException, InterruptedException {
         Stat stat = zooKeeper.exists("/lock", false);
-        //Èç¹û½ÚµãÒÑ¾­´æÔÚ£¬µÈ´ıÆäËü·şÎñÆ÷É¾³ı½Úµã¡£¼´£ºµÈ´ıÆäËü·şÎñÆ÷ÊÍ·ÅËø×ÊÔ´
+        //å¦‚æœèŠ‚ç‚¹å·²ç»å­˜åœ¨ï¼Œç­‰å¾…å…¶å®ƒæœåŠ¡å™¨åˆ é™¤èŠ‚ç‚¹ã€‚å³ï¼šç­‰å¾…å…¶å®ƒæœåŠ¡å™¨é‡Šæ”¾é”èµ„æº
         while(stat != null) {  }
 
-        //²ÎÊı£º1£¬½ÚµãÂ·¾¶£» 2£¬Òª´æ´¢µÄÊı¾İ£» 3£¬½ÚµãµÄÈ¨ÏŞ£» 4£¬½ÚµãµÄÀàĞÍ
+        //å‚æ•°ï¼š1ï¼ŒèŠ‚ç‚¹è·¯å¾„ï¼› 2ï¼Œè¦å­˜å‚¨çš„æ•°æ®ï¼› 3ï¼ŒèŠ‚ç‚¹çš„æƒé™ï¼› 4ï¼ŒèŠ‚ç‚¹çš„ç±»å‹
         String nodePath = zooKeeper.create("/lock", "This is Lock.".getBytes(), ZooDefs.Ids.OPEN_ACL_UNSAFE, CreateMode.EPHEMERAL);
-        //´´½¨³É¹¦£¬ÔòÏàµ±ÓÚÓµÓĞ¶ÀÕ¼Ëø£¬¿ÉÒÔ½øĞĞÒÔÏÂÂß¼­
-        //TODO ÒµÎñÂß¼­
+        //åˆ›å»ºæˆåŠŸï¼Œåˆ™ç›¸å½“äºæ‹¥æœ‰ç‹¬å é”ï¼Œå¯ä»¥è¿›è¡Œä»¥ä¸‹é€»è¾‘
+        //TODO ä¸šåŠ¡é€»è¾‘
         System.out.println(nodePath);
-        //ÒµÎñÂß¼­½áÊøºó£¬É¾³ı½Úµã£¬¼´ÊÍ·ÅËø×ÊÔ´
+        //ä¸šåŠ¡é€»è¾‘ç»“æŸåï¼Œåˆ é™¤èŠ‚ç‚¹ï¼Œå³é‡Šæ”¾é”èµ„æº
         zooKeeper.delete("/lock", -1);
     }
 
     /**
-     * Í¨¹ı´´½¨ÁÙÊ±Ê±Ğò½Úµã£¬ÊµÏÖ·şÎñÆ÷Ö®¼äµÄÊ±ĞòËø
+     * é€šè¿‡åˆ›å»ºä¸´æ—¶æ—¶åºèŠ‚ç‚¹ï¼Œå®ç°æœåŠ¡å™¨ä¹‹é—´çš„æ—¶åºé”
      */
     @Test
     public void lock() throws KeeperException, InterruptedException {
-        //²ÎÊı£º1£¬½ÚµãÂ·¾¶£» 2£¬Òª´æ´¢µÄÊı¾İ£» 3£¬½ÚµãµÄÈ¨ÏŞ£» 4£¬½ÚµãµÄÀàĞÍ
+        //å‚æ•°ï¼š1ï¼ŒèŠ‚ç‚¹è·¯å¾„ï¼› 2ï¼Œè¦å­˜å‚¨çš„æ•°æ®ï¼› 3ï¼ŒèŠ‚ç‚¹çš„æƒé™ï¼› 4ï¼ŒèŠ‚ç‚¹çš„ç±»å‹
         String nodePath = zooKeeper.create("/lock/sublock", "This is sub lock.".getBytes(), ZooDefs.Ids.OPEN_ACL_UNSAFE, CreateMode.EPHEMERAL_SEQUENTIAL);
         System.out.println(nodePath);
-        //´´½¨³É¹¦£¬ÔòÏàµ±ÓÚÓµÓĞ¶ÀÕ¼Ëø£¬¿ÉÒÔ½øĞĞÒÔÏÂÂß¼­
+        //åˆ›å»ºæˆåŠŸï¼Œåˆ™ç›¸å½“äºæ‹¥æœ‰ç‹¬å é”ï¼Œå¯ä»¥è¿›è¡Œä»¥ä¸‹é€»è¾‘
         while(true) {
             List<String> children = zooKeeper.getChildren("/lock", false);
             Collections.sort(children);
             if (nodePath.equals("/lock/"+children.get(0))){
-                //TODO ÒµÎñÂß¼­
+                //TODO ä¸šåŠ¡é€»è¾‘
                 System.out.println("TODO  Logic.");
                 break;
             }
         }
 
-        //ÒµÎñÂß¼­½áÊøºó£¬É¾³ı½Úµã£¬¼´ÊÍ·ÅËø×ÊÔ´
+        //ä¸šåŠ¡é€»è¾‘ç»“æŸåï¼Œåˆ é™¤èŠ‚ç‚¹ï¼Œå³é‡Šæ”¾é”èµ„æº
         zooKeeper.delete(nodePath, -1);
     }
 
     /**
-     * »ñÈ¡×Ó½Úµã£º ls
+     * è·å–å­èŠ‚ç‚¹ï¼š ls
      */
     @Test
     public void getChildren() throws KeeperException, InterruptedException {
@@ -125,7 +125,7 @@ public class SimpleZkClient {
 
     /**
      *
-     * Í¬²½»ñÈ¡½ÚµãÄÚÈİ£º get
+     * åŒæ­¥è·å–èŠ‚ç‚¹å†…å®¹ï¼š get
      */
     @Test
     public void getData() throws KeeperException, InterruptedException {
@@ -142,7 +142,7 @@ public class SimpleZkClient {
 
     /**
      *
-     * Òì²½»ñÈ¡½ÚµãÄÚÈİ£º get
+     * å¼‚æ­¥è·å–èŠ‚ç‚¹å†…å®¹ï¼š get
      */
     @Test
     public void getDataAsync() {
@@ -159,7 +159,7 @@ public class SimpleZkClient {
     @Test
     public void setData() throws KeeperException, InterruptedException {
         Stat stat = zooKeeper.setData("/java", "This is from java.".getBytes(), -1);
-        //¸üĞÂ½Úµãºó£¬version»á×Ô¶¯+1¡£¹Ê£¬·µ»ØÖµÎª0
+        //æ›´æ–°èŠ‚ç‚¹åï¼Œversionä¼šè‡ªåŠ¨+1ã€‚æ•…ï¼Œè¿”å›å€¼ä¸º0
         System.out.println(stat.getAversion());
     }
 
@@ -167,9 +167,9 @@ public class SimpleZkClient {
     public void setDataThread() throws KeeperException, InterruptedException {
         String path = "/java";
         Stat stat = new Stat();
-        //1,ÏÈ»ñÈ¡½ÚµãµÄµ±Ç°°æ±¾
+        //1,å…ˆè·å–èŠ‚ç‚¹çš„å½“å‰ç‰ˆæœ¬
         zooKeeper.getData(path,false,stat);
-        //2£¬ÔÚµ±Ç°°æ±¾µÄ»ù´¡ÉÏĞŞ¸Ä½ÚµãÄÚÈİ
+        //2ï¼Œåœ¨å½“å‰ç‰ˆæœ¬çš„åŸºç¡€ä¸Šä¿®æ”¹èŠ‚ç‚¹å†…å®¹
         zooKeeper.setData(path, "This is from java.".getBytes(), stat.getVersion());
     }
 
@@ -185,15 +185,15 @@ public class SimpleZkClient {
     }
 
     /**
-     * Èç¹ûÒªÉ¾³ıµÄ½ÚµãÓĞ×Ó½Úµã£¬»á±¨´í£ºKeeperException$NotEmptyException: KeeperErrorCode = Directory not empty for
-     * Èç¹û½Úµã²»´æÔÚ£¬»á±¨´í£ºKeeperException$NoNodeException: KeeperErrorCode = NoNode for
+     * å¦‚æœè¦åˆ é™¤çš„èŠ‚ç‚¹æœ‰å­èŠ‚ç‚¹ï¼Œä¼šæŠ¥é”™ï¼šKeeperException$NotEmptyException: KeeperErrorCode = Directory not empty for
+     * å¦‚æœèŠ‚ç‚¹ä¸å­˜åœ¨ï¼Œä¼šæŠ¥é”™ï¼šKeeperException$NoNodeException: KeeperErrorCode = NoNode for
      */
     @Test
     public void delete() throws KeeperException, InterruptedException {
         List<String> children = zooKeeper.getChildren("/lock", false);
         children.sort(String::compareTo);
         System.out.println("/lock/"+children.get(0));
-        //version = -1 : Æ¥ÅäËùÓĞµÄ°æ±¾
+        //version = -1 : åŒ¹é…æ‰€æœ‰çš„ç‰ˆæœ¬
         zooKeeper.delete("/lock/"+children.get(0), -1);
     }
 

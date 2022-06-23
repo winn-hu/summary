@@ -16,9 +16,9 @@ public class RequestUtils {
      *
      * X-Forwarded-For：Squid 服务代理
      *
-     * Proxy-Client-IP：apache 服务代理
+     * proxy-Client-IP：apache 服务代理
      *
-     * WL-Proxy-Client-IP：weblogic 服务代理
+     * WL-proxy-Client-IP：weblogic 服务代理
      *
      * HTTP_CLIENT_IP：有些代理服务器
      *
@@ -37,10 +37,10 @@ public class RequestUtils {
     public static String getIpAddr(HttpServletRequest request) {
         String ip = request.getHeader("X-Forwarded-For");
         if (ip == null || ip.length() == 0 || "unknown".equalsIgnoreCase(ip)) {
-            ip = request.getHeader("Proxy-Client-IP");
+            ip = request.getHeader("proxy-Client-IP");
         }
         if (ip == null || ip.length() == 0 || "unknown".equalsIgnoreCase(ip)) {
-            ip = request.getHeader("WL-Proxy-Client-IP");
+            ip = request.getHeader("WL-proxy-Client-IP");
         }
         if (ip == null || ip.length() == 0 || "unknown".equalsIgnoreCase(ip)) {
             ip = request.getRemoteAddr();

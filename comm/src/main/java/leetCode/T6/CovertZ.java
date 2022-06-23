@@ -1,4 +1,4 @@
-package leetCode.six;
+package leetCode.T6;
 
 import java.util.ArrayList;
 import java.util.List;

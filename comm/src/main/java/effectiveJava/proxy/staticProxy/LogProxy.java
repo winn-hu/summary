@@ -12,8 +12,8 @@ public class LogProxy implements HelloService {
 
     @Override
     public void sayHello() {
-        System.out.println("Static Proxy : Before Hello....");
+        System.out.println("Static proxy : Before Hello....");
         service.sayHello();
-        System.out.println("Static Proxy : After Hello....");
+        System.out.println("Static proxy : After Hello....");
     }
 }
