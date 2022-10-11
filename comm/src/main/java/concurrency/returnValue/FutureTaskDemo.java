@@ -10,7 +10,7 @@ import java.util.concurrent.FutureTask;
 public class FutureTaskDemo {
 
     public static void main(String[] args) throws ExecutionException, InterruptedException {
-        FutureTask futureTask = new FutureTask(new Test());
+        FutureTask futureTask = new FutureTask<>(new Test());
         Thread thread = new Thread(futureTask);
         thread.start();
         Object returnVal = futureTask.get();
@@ -18,9 +18,10 @@ public class FutureTaskDemo {
     }
 }
 
-class Test implements Callable {
+class Test implements Callable<String> {
+
     @Override
-    public Object call() {
+    public String call() {
         return "Return Value...";
     }
 }
