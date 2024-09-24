@@ -1,7 +1,6 @@
 package tools;
 
 import utils.ExcelUtils;
-import utils.JDBCUtil;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -17,7 +16,8 @@ public class ExportTableTools {
 
     public static void ExportSingleTable(String tableName) {
         try {
-            List<Map<String, Object>> dataList = JDBCUtil.query("select * from " + tableName, new ArrayList<>(0));
+            //List<Map<String, Object>> dataList = JDBCUtil.query("select * from " + tableName, new ArrayList<>(0));
+            List<Map<String, Object>> dataList = new ArrayList<>();
             ExcelUtils.write(tableName,dataList);
         } catch (Exception e) {
             e.printStackTrace();

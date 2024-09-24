@@ -1,7 +1,5 @@
 package jdbc;
 
-import utils.JDBCUtil;
-
 import java.io.*;
 import java.sql.*;
 import java.util.Objects;
@@ -57,7 +55,7 @@ public class BlobUtil {
 		} catch (SQLException | IOException sqle) {
 			sqle.printStackTrace();
 		} finally {
-			JDBCUtil.close(con,ps,rs);
+			//JDBCUtil.close(con,ps,rs);
 		}
 	}
 
@@ -85,7 +83,7 @@ public class BlobUtil {
 		} catch (SQLException | IOException e) {
 			e.printStackTrace();
 		} finally {
-			JDBCUtil.close(con,ps,null);
+			//JDBCUtil.close(con,ps,null);
 		}
 	}
 

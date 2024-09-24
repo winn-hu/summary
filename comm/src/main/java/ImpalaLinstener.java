@@ -1,5 +1,5 @@
-import org.apache.hadoop.conf.Configuration;
-import org.apache.hadoop.security.UserGroupInformation;
+//import org.apache.hadoop.conf.Configuration;
+//import org.apache.hadoop.security.UserGroupInformation;
 
 import javax.servlet.ServletContextEvent;
 import javax.servlet.ServletContextListener;
@@ -8,7 +8,7 @@ import java.util.Timer;
 import java.util.TimerTask;
 
 public class ImpalaLinstener implements ServletContextListener {
-	private static Configuration kuduconf = new Configuration();
+	/*private static Configuration kuduconf = new Configuration();
 
 	public void initkerberos() {
 		String keytabPrincipal = "impala/indata-147-12-78-61.hnds.com@HNDS.COM";
@@ -48,5 +48,5 @@ public class ImpalaLinstener implements ServletContextListener {
 	public static Configuration getKuduConf() {
 		kuduconf.set("hadoop.security.authentication", "Kerberos");
 		return kuduconf;
-	}
+	}*/
 }

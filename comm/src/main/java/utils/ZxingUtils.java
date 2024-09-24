@@ -1,28 +1,19 @@
 package utils;
 
+import com.google.zxing.*;
+import com.google.zxing.client.j2se.BufferedImageLuminanceSource;
+import com.google.zxing.client.j2se.MatrixToImageWriter;
+import com.google.zxing.common.BitMatrix;
+import com.google.zxing.common.HybridBinarizer;
+import com.google.zxing.qrcode.decoder.ErrorCorrectionLevel;
+
+import javax.imageio.ImageIO;
 import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
 import java.nio.file.Path;
 import java.util.HashMap;
 import java.util.Map;
-
-import javax.imageio.ImageIO;
-
-import com.google.zxing.BarcodeFormat;
-import com.google.zxing.BinaryBitmap;
-import com.google.zxing.DecodeHintType;
-import com.google.zxing.EncodeHintType;
-import com.google.zxing.MultiFormatReader;
-import com.google.zxing.MultiFormatWriter;
-import com.google.zxing.NotFoundException;
-import com.google.zxing.Result;
-import com.google.zxing.WriterException;
-import com.google.zxing.client.j2se.BufferedImageLuminanceSource;
-import com.google.zxing.client.j2se.MatrixToImageWriter;
-import com.google.zxing.common.BitMatrix;
-import com.google.zxing.common.HybridBinarizer;
-import com.google.zxing.qrcode.decoder.ErrorCorrectionLevel;
 
 public class ZxingUtils {
 
@@ -35,10 +26,10 @@ public class ZxingUtils {
 	
 	public static void createZxing(String context){
 		//define
-		Map<EncodeHintType, Object> hints = new HashMap<EncodeHintType, Object>();
+		Map<EncodeHintType, Object> hints = new HashMap<>();
 		hints.put(EncodeHintType.CHARACTER_SET, CHARACTER);
 		hints.put(EncodeHintType.ERROR_CORRECTION, ERROR_CORRECT_LEVEL);
-		hints.put(EncodeHintType.MARGIN, 2);//�߿�߾࣬Ĭ��Ϊ5
+		hints.put(EncodeHintType.MARGIN, 2);
 		
 		try {
 			BitMatrix matrix = new MultiFormatWriter().encode(context, BarcodeFormat.QR_CODE, WIDTH, HEIGHT, hints);
@@ -49,12 +40,12 @@ public class ZxingUtils {
 		}
 	}
 	
-	public static Result decodeZxing(){
+	public static Result decodeZxing(String file){
 		Map<DecodeHintType,Object> hints = new HashMap<>();
 		hints.put(DecodeHintType.CHARACTER_SET, CHARACTER);
 		
 		try {
-			BufferedImage image = ImageIO.read(new File(PATH));
+			BufferedImage image = ImageIO.read(new File(file));
 			BufferedImageLuminanceSource luminanceSource = new BufferedImageLuminanceSource(image);
 			HybridBinarizer hybridBinarizer = new HybridBinarizer(luminanceSource);
 			BinaryBitmap binaryBitmap = new BinaryBitmap(hybridBinarizer);
@@ -64,4 +55,5 @@ public class ZxingUtils {
 		}
 		return null;
 	}
+
 }

@@ -32,7 +32,7 @@ public class MyQueue<E> {
 	
 	/**
 	 * the head pointer of queue
-	 *it always point the first alive element
+	 *it always point the next alive element
 	 */
 	private int front;
 	
@@ -93,7 +93,7 @@ public class MyQueue<E> {
 	}
 	
 	/**
-	 * remove the first alive element in queue
+	 * remove the next alive element in queue
 	 * while queue is queue is empty, set front and end pointer point the queue's head 
 	 * 
 	 * @return
@@ -109,7 +109,7 @@ public class MyQueue<E> {
 	}
 	
 	/**
-	 * get the first alive element in queue
+	 * get the next alive element in queue
 	 * @return
 	 * 		the element to be returned
 	 */

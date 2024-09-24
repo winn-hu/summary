@@ -1,13 +1,12 @@
 package concurrency.returnValue;
 
-import org.apache.directory.api.util.Strings;
 
 public class WaitSubThread {
 
     public static void main(String[] args) throws InterruptedException {
         MyThread thread = new MyThread();
         thread.start();
-        while (Strings.isEmpty(thread.returnVal)) {
+        while (thread.returnVal == null || "".equals(thread.returnVal)) {
             System.out.println("waiting.....");
             Thread.sleep(1000);
         }

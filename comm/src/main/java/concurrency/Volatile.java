@@ -41,12 +41,12 @@ public class Volatile {
     }
 
 
-    private static  boolean flag = false;
+    private static  volatile boolean flag = false;
 
     @Test
-    public void testVolatile() throws InterruptedException {
+    public void testVolatile() {
         new Thread(() -> {
-            flag = false;
+            flag = true;
             System.out.println("Flag is modified");
         }).start();
 

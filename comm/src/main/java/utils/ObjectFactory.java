@@ -10,10 +10,10 @@ public class ObjectFactory {
     private static SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
     private static SimpleDateFormat sdfLong = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
 
-    public static Object createObject(String name) {
+    public static Object createObject(String className) {
         Object o = null;
         try {
-            Class c = Class.forName(name);
+            Class c = Class.forName(className);
             o = c.newInstance();
         } catch (Exception e) {
 			e.printStackTrace();

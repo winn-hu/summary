@@ -1,4 +1,4 @@
-package designMode.ChainofResponsibilty;
+package designMode.ChainofResponsibilty.next;
 
 public class CarTailHandler extends CarHandler {
     @Override

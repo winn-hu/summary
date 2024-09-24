@@ -22,7 +22,7 @@ public class ZxingTest {
 	
 	@Test
 	public void decodeZxing() {
-		Result result = ZxingUtils.decodeZxing();
+		Result result = ZxingUtils.decodeZxing("H:/xk.jpg");
 		if(result != null){
 			System.out.println("Result : "+result.toString());			
 		}

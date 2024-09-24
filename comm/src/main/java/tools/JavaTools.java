@@ -5,7 +5,7 @@ import net.sourceforge.pinyin4j.format.HanyuPinyinCaseType;
 import net.sourceforge.pinyin4j.format.HanyuPinyinOutputFormat;
 import net.sourceforge.pinyin4j.format.HanyuPinyinToneType;
 import net.sourceforge.pinyin4j.format.exception.BadHanyuPinyinOutputFormatCombination;
-import utils.StringUtils;
+import org.springframework.util.StringUtils;
 
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
@@ -21,7 +21,7 @@ public class JavaTools {
 			String context;
 			while((context = br.readLine()) != null){
 				//remove annotation line & empty line
-				if(!context.startsWith("#") && !StringUtils.isEmpty(context)){
+				if(!context.startsWith("#") && !StringUtils.hasText(context)){
 					writer.write(context);
 					writer.newLine();
 				}

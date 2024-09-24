@@ -1,5 +1,7 @@
 package jdk.custom.list;
 
+import java.util.Iterator;
+
 /**
  * 
  * show all fields and method,please click "ctrl + o"
@@ -16,7 +18,7 @@ package jdk.custom.list;
  *
  * @param <E>
  */
-public class MyArrayList<E> {
+public class MyArrayList<E> implements MyCollection<E>{
 	/**
 	 * The default capacity while use constructor form superClass
 	 */
@@ -118,7 +120,27 @@ public class MyArrayList<E> {
 		size--;
 		return element;
 	}
-	
+
+	public boolean remove(E element){
+		int index = indexOf(element);
+		if (index == -1) return false;
+		if(index == size - 1){
+			arr[index] = null;
+		}
+		System.arraycopy(arr, index + 1, arr, index, size - index);
+		size--;
+		return true;
+	}
+
+	public int indexOf(E element) {
+		for (int i = 0; i < size; i++) {
+			if(element == arr[i]) {
+				return i;
+			}
+		}
+		return -1;
+	}
+
 	/**
 	 * 
 	 * @param index
@@ -127,9 +149,15 @@ public class MyArrayList<E> {
 	 * 		the element to get
 	 */
 	public E get(int index){
+		checkArange(index);
 		return arr[index];
 	}
-	
+
+	@Override
+	public Iterator<E> iterator() {
+		return new ArrayIterator();
+	}
+
 	/**
 	 * check whether index is out of bounds
 	 * @param index
@@ -154,5 +182,19 @@ public class MyArrayList<E> {
 		return result.toString();
 		
 	}
-	
+
+	private class ArrayIterator implements Iterator<E> {
+
+		private int index;
+
+		@Override
+		public boolean hasNext() {
+			return index < size;
+		}
+
+		@Override
+		public E next() {
+			return get(index++);
+		}
+	}
 }

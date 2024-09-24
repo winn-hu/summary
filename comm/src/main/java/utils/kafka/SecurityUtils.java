@@ -1,15 +1,20 @@
 package utils.kafka;
 
+//import utils.PropertiesLoader;
+
 import java.util.Properties;
 
 public class SecurityUtils {
 
-	private static PropertiesLoader prokafka = new PropertiesLoader("kafka.properties");
+	//private static PropertiesLoader prokafka = new PropertiesLoader("kafka.properties");
 
 	public static Properties getSecurityProperties() {
-		String krb5 = prokafka.getProperty("kafka.krb5.conf");
+		/*String krb5 = prokafka.getProperty("kafka.krb5.conf");
 		String keytab = prokafka.getProperty("kafka.keytabFile");
-		String principal = prokafka.getProperty("kafka.keytab.principal");
+		String principal = prokafka.getProperty("kafka.keytab.principal");*/
+		String krb5 = null;
+		String keytab = null;
+		String principal = null;
 
 		Properties props = new Properties();
 
@@ -33,7 +38,7 @@ public class SecurityUtils {
 					"enable.auto.commit","auto.commit.interval.ms","auto.offset.reset",
 					"session.timeout.ms","key.deserializer","value.deserializer"};
 			for(String key:KAFKY_KEY_LIST) {
-				props.put(key, prokafka.getProperty("kafka."+key));
+				//props.put(key, prokafka.getProperty("kafka."+key));
 			}
 
 		}else{

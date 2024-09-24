@@ -9,6 +9,9 @@ import java.awt.*;
 import java.awt.image.BufferedImage;
 import java.io.File;
 
+/**
+ * 生成二维码
+ */
 public class QRCodeUtils {
 
 	private static final char ERROR_CORRECT_LEVEL = 'M';
