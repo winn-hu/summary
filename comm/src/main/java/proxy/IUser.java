@@ -2,5 +2,7 @@ package proxy;
 
 public interface IUser {
 
-    void out();
+    void get();
+
+    void insertDB();
 }

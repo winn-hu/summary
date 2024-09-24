@@ -17,4 +17,9 @@ public class UserProxy {
                 });
     }
 
+    public static void main(String[] args) {
+        IUser proxy = UserProxy.getProxy();
+        proxy.get();
+    }
+
 }

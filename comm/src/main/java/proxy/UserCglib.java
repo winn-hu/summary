@@ -15,13 +15,13 @@ public class UserCglib {
         Callback[] callBacks = {
                 (MethodInterceptor) (o, method, objects, methodProxy) -> {
                     System.out.println("开始调用insert");
-                    Object result = method.invoke(o, objects);
+                    Object result = methodProxy.invokeSuper(o, objects);
                     System.out.println("结束调用insert");
                     return result;
                 },
                 (MethodInterceptor) (o, method, objects, methodProxy) -> {
                     System.out.println("开始调用get");
-                    Object result = method.invoke(o, objects);
+                    Object result = methodProxy.invokeSuper(o, objects);
                     System.out.println("结束调用get");
                     return result;
                 }
@@ -30,11 +30,7 @@ public class UserCglib {
         enhancer.setCallbacks(callBacks);
         //设置过滤器，筛选回调函数，返回的是callBacks数组的下标  即：insert开头的方法使用第1个回调函数
         enhancer.setCallbackFilter(method -> method.getName().startsWith("insert")  ? 0 : 1);
-        //获取代理对象
-        User proxy = (User) enhancer.create();
-        //调用代理对象的方法
-        proxy.out();
-        return proxy;
+        return (User) enhancer.create();
     }
 
     public static User getCglibByCallbackHelper() {
@@ -43,13 +39,13 @@ public class UserCglib {
         //创建多个回调函数
         MethodInterceptor insertInterceptor = (o, method, objects, methodProxy) -> {
             System.out.println("开始调用insert");
-            Object result = method.invoke(o, objects);
+            Object result = methodProxy.invokeSuper(o, objects);
             System.out.println("结束调用insert");
             return result;
         };
         MethodInterceptor getInterceptor = (o, method, objects, methodProxy) -> {
             System.out.println("开始调用get");
-            Object result = method.invoke(o, objects);
+            Object result = methodProxy.invokeSuper(o, objects);
             System.out.println("结束调用get");
             return result;
         };
@@ -68,11 +64,13 @@ public class UserCglib {
         //设置过滤器
         enhancer.setCallbackFilter(callbackHelper);
 
-        //获取代理对象
-        User proxy = (User) enhancer.create();
+        return (User) enhancer.create();
+    }
 
-        //调用代理对象的方法
-        proxy.out();
-        return proxy;
+    public static void main(String[] args) {
+        User proxy = UserCglib.getCglibByCallbackHelper();
+        proxy.insertDB();
+        System.out.println("-----------------");
+        proxy.get();
     }
 }
